@@ -1,0 +1,153 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+	  "description": "The ID used to identify the customer",
+      "contactlabProperties": {
+        "notAnalyzed": true
+      }
+    },
+    "nodeId": {
+      "type": "string",
+	  "description": "The ID used to identify the node",
+      "contactlabProperties": {
+        "notAnalyzed": true
+      }
+    },
+    "externalId": {
+      "type": "string",
+	  "description": "The ID used to identify the customer in another (external) system",
+      "contactlabProperties": {
+        "notAnalyzed": true
+      }
+    },
+    "extra": {
+      "type": "string"
+	  "description": "The non-schema section where data can be saved in a different structure for each customer",
+    },
+    "registeredAt": {
+      "type": "string",
+      "format": "date-time",
+	  "description": "The date and time of the first registration in Contacthub"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time",
+	  "description": "The date and time of the last modification to the customer"	  
+    },
+    "deletedAt": {
+      "type": "string",
+      "format": "date-time",
+	  "description": "The date and time the customer was cancelled in Contacthub"
+    },
+    "enabled": {
+      "type": "boolean",
+	  "description": "The flag that defines whether a customer is enabled or disabled"
+    },
+    "deleted": {
+      "type": "boolean",
+	  "description": "The logical cancellation flag"
+    },
+    "base": {
+      "$ref": "resource:/schema/base-properties/base-properties.json",
+	  "description": "The customer profile base properties that are built-in to Contacthub"
+    },
+    "extended": {
+      "type": "object",
+	  "description": "The customer profile extended properties that are defined by the Contacthub user"
+    },
+    "sources": {
+      "type": "object",
+	  "description": "The last raw data for the customer from all sources",
+      "patternProperties": {
+        "": {
+          "$ref": "#/definitions/SourceCustomer"
+        }
+      }
+    },
+    "tags": {
+      "type": "object",
+	  "description": "The tags section for the customer",	  
+      "additionalProperties": false,
+      "properties": {
+        "auto": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+		  "description": "The tag assigned to the customer in automatic mode (for example, following machine elaboration, automation, calculating a KPI and similar)"
+        },
+        "manual": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+		  "description": "The tag that is manually is assigned to the customer"
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Tags": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "auto": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "manual": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "SourceCustomer": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sourceId": {
+          "type": "string"
+        },
+        "nodeId": {
+          "type": "string"
+        },
+        "externalId": {
+          "type": "string"
+        },
+        "extra": {
+          "type": "string"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "base": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "extended": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "tags": {
+          "$ref": "#/definitions/Tags"
+        },
+        "registeredAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  }
+}

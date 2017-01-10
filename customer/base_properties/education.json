@@ -1,0 +1,65 @@
+{
+  "$schema": "http://api.contactlab.it/hub#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "contactlabProperties": {
+        "notAnalyzed": true
+      },
+	  "description": "The ID used to identify the education establishment"
+    },
+    "schoolType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "PRIMARY_SCHOOL",
+        "SECONDARY_SCHOOL",
+        "HIGH_SCHOOL",
+        "COLLEGE",
+        "OTHER"
+      ],
+	  "description": "The type of education establishment"
+    },
+    "schoolName": {
+      "type": [
+        "string",
+        "null"
+      ],
+	  "description": "The name of the education establishment"
+    },
+    "schoolConcentration": {
+      "type": [
+        "string",
+        "null"
+      ],
+	  "description": "The study concentration or core subjects"
+    },
+    "startYear": {
+      "type": [
+        "integer",
+        "null"
+      ],
+	  "description": "The year study began"
+    },
+    "endYear": {
+      "type": [
+        "integer",
+        "null"
+      ],
+	  "description": "The year study ended"
+    },
+    "isCurrent": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+	  "description": "The flag that defines whether the study is current"
+    }
+  }
+}

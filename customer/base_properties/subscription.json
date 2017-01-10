@@ -1,0 +1,111 @@
+{
+  "$schema": "http://api.contactlab.it/hub#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "contactlabProperties": {
+        "notAnalyzed": true
+      },
+	  "description": "The ID used to identify the subscription"
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ],
+	  "description": "The name of the subscription"
+    },
+    "type": {
+      "type": [
+        "string",
+        "null"
+      ],
+	  "description": "The type of subscription"
+    },
+    "kind": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "DIGITAL_MESSAGE",
+        "SERVICE",
+        "OTHER"
+      ],
+	  "description": "The kind of subscription"
+    },
+    "subscribed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+	  "description": "The flag that defines a subscriber"
+    },
+    "startDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+	  "description": "The start date of the subscription"
+    },
+    "endDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+	  "description": "The end date of the subscription"
+    },
+    "subscriberId": {
+      "type": [
+        "string",
+        "null"
+      ],
+	  "description": "The ID used to identify the subscriber"
+    },
+    "registeredAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+	  "description": "The date and time the subscription is first registered in Contacthub"
+    },
+    "updatedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+	  "description": "The date time of the last modification to the subscription in Contacthub"
+    },
+    "preferences": {
+      "type": "array",
+	  "description": "The list of customer subscription preferences",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": [
+              "string",
+              "null"
+            ],
+			"description": "The subscription preference key"
+          },
+          "value": {
+            "type": [
+              "string",
+              "null"
+            ],
+			"description": "The subscription preference value"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1966 @@
+[
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "text": {
+          "description": "The ticket text",
+          "type": "string"
+        },
+        "subject": {
+          "description": "The ticket subject",
+          "type": "string"
+        },
+        "category": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The list of ticket categories",
+          "type": "array"
+        },
+        "ticketId": {
+          "description": "The ID used to identify the ticket",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer opened a ticket with customer care",
+    "label": "Opened ticket",
+    "mode": "ACTIVE",
+    "type": "openedTicket",
+    "id": "openedTicket"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "text": {
+          "description": "The ticket text",
+          "type": "string"
+        },
+        "subject": {
+          "description": "The ticket subject",
+          "type": "string"
+        },
+        "category": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The list of ticket categories",
+          "type": "array"
+        },
+        "ticketId": {
+          "description": "The ID used to identify the ticket",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "A customer care agent has replied to the ticket from a customer",
+    "label": "Replied ticket",
+    "mode": "PASSIVE",
+    "type": "repliedTicket",
+    "id": "repliedTicket"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "text": {
+          "description": "The ticket text",
+          "type": "string"
+        },
+        "subject": {
+          "description": "The ticket subject",
+          "type": "string"
+        },
+        "category": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The list of ticket categories",
+          "type": "array"
+        },
+        "ticketId": {
+          "description": "The ID used to identify the ticket",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer closed a ticket with customer care",
+    "label": "Closed ticket",
+    "mode": "ACTIVE",
+    "type": "closedTicket",
+    "id": "closedTicket"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer logged in to an app, software or a web site",
+    "label": "Logged in",
+    "mode": "ACTIVE",
+    "type": "loggedIn",
+    "id": "loggedIn"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer logged out of an app, software or a web site",
+    "label": "Logged out",
+    "mode": "ACTIVE",
+    "type": "loggedOut",
+    "id": "loggedOut"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "rating": {
+          "description": "The review rating",
+          "type": "string"
+        },
+        "classifications": {
+          "items": {
+            "properties": {
+              "value": {
+                "description": "The classification value",
+                "type": "string"
+              },
+              "key": {
+                "description": "The classification key",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false,
+            "type": "object"
+          },
+          "description": "The list of classifications for the product",
+          "type": "array"
+        },
+        "id": {
+          "description": "The product database ID",
+          "type": "string"
+        },
+        "sku": {
+          "description": "The product SKU",
+          "type": "string"
+        },
+        "name": {
+          "description": "The product name",
+          "type": "string"
+        },
+        "price": {
+          "description": "The product price",
+          "type": "number"
+        },
+        "imageUrl": {
+          "format": "uri",
+          "description": "The online catalogue image for the product",
+          "type": "string"
+        },
+        "linkUrl": {
+          "format": "uri",
+          "description": "The online catalogue related to the product",
+          "type": "string"
+        },
+        "shortDescription": {
+          "description": "The short description of the product",
+          "type": "string"
+        },
+        "category": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The list of categories for the product",
+          "type": "array"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer reviewed a product",
+    "label": "Reviewed product",
+    "mode": "ACTIVE",
+    "type": "reviewedProduct",
+    "id": "reviewedProduct"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "category": {
+          "description": "The product category being viewed",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer viewed a product category list",
+    "label": "Viewed product category",
+    "mode": "ACTIVE",
+    "type": "viewedProductCategory",
+    "id": "viewedProductCategory"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "classifications": {
+          "items": {
+            "properties": {
+              "value": {
+                "description": "The classification value",
+                "type": "string"
+              },
+              "key": {
+                "description": "The classification key",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false,
+            "type": "object"
+          },
+          "description": "The list of classifications for the product",
+          "type": "array"
+        },
+        "id": {
+          "description": "The product database ID",
+          "type": "string"
+        },
+        "sku": {
+          "description": "The product SKU",
+          "type": "string"
+        },
+        "name": {
+          "description": "The product name",
+          "type": "string"
+        },
+        "price": {
+          "description": "The product price",
+          "type": "number"
+        },
+        "imageUrl": {
+          "format": "uri",
+          "description": "The online catalogue image for the product",
+          "type": "string"
+        },
+        "linkUrl": {
+          "format": "uri",
+          "description": "The online catalogue related to the product",
+          "type": "string"
+        },
+        "shortDescription": {
+          "description": "The short description of the product",
+          "type": "string"
+        },
+        "category": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The list of categories for the product",
+          "type": "array"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer viewed the details of a product",
+    "label": "Viewed product",
+    "mode": "ACTIVE",
+    "type": "viewedProduct",
+    "id": "viewedProduct"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "classifications": {
+          "items": {
+            "properties": {
+              "value": {
+                "description": "The classification value",
+                "type": "string"
+              },
+              "key": {
+                "description": "The classification key",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false,
+            "type": "object"
+          },
+          "description": "The list of classifications for the product",
+          "type": "array"
+        },
+        "category": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The list of categories for the product",
+          "type": "array"
+        },
+        "id": {
+          "description": "The product database ID",
+          "type": "string"
+        },
+        "sku": {
+          "description": "The product SKU",
+          "type": "string"
+        },
+        "name": {
+          "description": "The product name",
+          "type": "string"
+        },
+        "price": {
+          "description": "The product price",
+          "type": "number"
+        },
+        "quantity": {
+          "description": "Product quantity",
+          "type": "number"
+        },
+        "imageUrl": {
+          "format": "uri",
+          "description": "The online catalogue image for the product",
+          "type": "string"
+        },
+        "linkUrl": {
+          "format": "uri",
+          "description": "The online catalogue related to the product",
+          "type": "string"
+        },
+        "shortDescription": {
+          "description": "The short description of the product",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer added a product to their shopping cart",
+    "label": "Added product",
+    "mode": "ACTIVE",
+    "type": "addedProduct",
+    "id": "addedProduct"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "classifications": {
+          "items": {
+            "properties": {
+              "value": {
+                "description": "The classification value",
+                "type": "string"
+              },
+              "key": {
+                "description": "The classification key",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false,
+            "type": "object"
+          },
+          "description": "The list of classifications for the product",
+          "type": "array"
+        },
+        "category": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The list of categories for the product",
+          "type": "array"
+        },
+        "id": {
+          "description": "The product database ID",
+          "type": "string"
+        },
+        "sku": {
+          "description": "The product SKU",
+          "type": "string"
+        },
+        "name": {
+          "description": "The product name",
+          "type": "string"
+        },
+        "price": {
+          "description": "The product price",
+          "type": "number"
+        },
+        "quantity": {
+          "description": "The product quantity",
+          "type": "number"
+        },
+        "imageUrl": {
+          "format": "uri",
+          "description": "The online catalogue image for the product",
+          "type": "string"
+        },
+        "linkUrl": {
+          "format": "uri",
+          "description": "The online catalogue related to the product",
+          "type": "string"
+        },
+        "shortDescription": {
+          "description": "The short description of the product",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer removed a product from their shopping cart",
+    "label": "Removed product",
+    "mode": "ACTIVE",
+    "type": "removedProduct",
+    "id": "removedProduct"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "classifications": {
+          "items": {
+            "properties": {
+              "value": {
+                "description": "The classification value",
+                "type": "string"
+              },
+              "key": {
+                "description": "The classification key",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false,
+            "type": "object"
+          },
+          "description": "The list of classifications for the product",
+          "type": "array"
+        },
+        "id": {
+          "description": "The product database ID",
+          "type": "string"
+        },
+        "sku": {
+          "description": "The product SKU",
+          "type": "string"
+        },
+        "name": {
+          "description": "The product name",
+          "type": "string"
+        },
+        "price": {
+          "description": "The product price",
+          "type": "number"
+        },
+        "imageUrl": {
+          "format": "uri",
+          "description": "The online catalogue image for the product",
+          "type": "string"
+        },
+        "linkUrl": {
+          "format": "uri",
+          "description": "The online catalogue related to the product",
+          "type": "string"
+        },
+        "shortDescription": {
+          "description": "The short description of the product",
+          "type": "string"
+        },
+        "category": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The list of categories for the product",
+          "type": "array"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer added a product to their wish list",
+    "label": "Added wishlist",
+    "mode": "ACTIVE",
+    "type": "addedWishlist",
+    "id": "addedWishlist"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "classifications": {
+          "items": {
+            "properties": {
+              "value": {
+                "description": "The classification value",
+                "type": "string"
+              },
+              "key": {
+                "description": "The classification key",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false,
+            "type": "object"
+          },
+          "description": "The list of classifications for the product",
+          "type": "array"
+        },
+        "id": {
+          "description": "The product database ID",
+          "type": "string"
+        },
+        "sku": {
+          "description": "The product SKU",
+          "type": "string"
+        },
+        "name": {
+          "description": "The product name",
+          "type": "string"
+        },
+        "price": {
+          "description": "The product price",
+          "type": "number"
+        },
+        "imageUrl": {
+          "format": "uri",
+          "description": "The online catalogue image for the product",
+          "type": "string"
+        },
+        "linkUrl": {
+          "format": "uri",
+          "description": "The online catalogue related to the product",
+          "type": "string"
+        },
+        "shortDescription": {
+          "description": "The short description of the product",
+          "type": "string"
+        },
+        "category": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The list of categories for the product",
+          "type": "array"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer removed a product from their wish list",
+    "label": "Removed wishlist",
+    "mode": "ACTIVE",
+    "type": "removedWishlist",
+    "id": "removedWishlist"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "classifications": {
+          "items": {
+            "properties": {
+              "value": {
+                "description": "The classification value",
+                "type": "string"
+              },
+              "key": {
+                "description": "The classification key",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false,
+            "type": "object"
+          },
+          "description": "The list of classifications for the product",
+          "type": "array"
+        },
+        "id": {
+          "description": "The product database ID",
+          "type": "string"
+        },
+        "sku": {
+          "description": "The product SKU",
+          "type": "string"
+        },
+        "name": {
+          "description": "The product name",
+          "type": "string"
+        },
+        "price": {
+          "description": "The product price",
+          "type": "number"
+        },
+        "imageUrl": {
+          "format": "uri",
+          "description": "The online catalogue image for the product",
+          "type": "string"
+        },
+        "linkUrl": {
+          "format": "uri",
+          "description": "The online catalogue related to the product",
+          "type": "string"
+        },
+        "shortDescription": {
+          "description": "The short description of the product",
+          "type": "string"
+        },
+        "category": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The list of categories for the product",
+          "type": "array"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer added a product to the comparator",
+    "label": "Added compare",
+    "mode": "ACTIVE",
+    "type": "addedCompare",
+    "id": "addedCompare"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "classifications": {
+          "items": {
+            "properties": {
+              "value": {
+                "description": "The classification value",
+                "type": "string"
+              },
+              "key": {
+                "description": "The classification key",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false,
+            "type": "object"
+          },
+          "description": "The list of classifications for the product",
+          "type": "array"
+        },
+        "id": {
+          "description": "The product database ID",
+          "type": "string"
+        },
+        "sku": {
+          "description": "The product SKU",
+          "type": "string"
+        },
+        "name": {
+          "description": "The product name",
+          "type": "string"
+        },
+        "price": {
+          "description": "The product price",
+          "type": "number"
+        },
+        "imageUrl": {
+          "format": "uri",
+          "description": "The online catalogue image for the product",
+          "type": "string"
+        },
+        "linkUrl": {
+          "format": "uri",
+          "description": "The online catalogue related to the product",
+          "type": "string"
+        },
+        "shortDescription": {
+          "description": "The short description of the product",
+          "type": "string"
+        },
+        "category": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The list of categories for the product",
+          "type": "array"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer removed a product from the comparator",
+    "label": "Removed compare",
+    "mode": "ACTIVE",
+    "type": "removedCompare",
+    "id": "removedCompare"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "products": {
+          "items": {
+            "properties": {
+				"classifications": {
+				  "items": {
+					"properties": {
+					  "value": {
+						"description": "The classification value",
+						"type": "string"
+					  },
+					  "key": {
+						"description": "The classification key",
+						"type": "string"
+					  }
+					},
+					"additionalProperties": false,
+					"type": "object"
+				  },
+				  "description": "The list of classifications for the product",
+				  "type": "array"
+				},
+              "category": {
+                "items": {
+                  "type": "string"
+                },
+                "description": "The list of categories for the product",
+                "type": "array"
+              },
+              "shortDescription": {
+                "description": "The short description of the product",
+                "type": "string"
+              },
+              "linkUrl": {
+                "format": "uri",
+                "description": "The online catalogue related to the product",
+                "type": "string"
+              },
+              "imageUrl": {
+                "format": "uri",
+                "description": "The online catalogue image for the product",
+                "type": "string"
+              },
+              "coupon": {
+                "description": "The coupon code associated with a product",
+                "type": "string"
+              },
+              "tax": {
+                "description": "The tax for the order line",
+                "type": "number"
+              },
+              "id": {
+                "description": "The product database ID",
+                "type": "string"
+              },
+              "type": {
+                "enum": [
+                  "sale",
+                  "return"
+                ],
+                "description": "The order line type",
+                "type": "string"
+              },
+              "sku": {
+                "description": "The product SKU",
+                "type": "string"
+              },
+              "name": {
+                "description": "The product name",
+                "type": "string"
+              },
+              "price": {
+                "description": "The product price",
+                "type": "number"
+              },
+              "subtotal": {
+                "description": "The total amount for the order line",
+                "type": "number"
+              },
+              "quantity": {
+                "description": "The product quantity",
+                "type": "number"
+              },
+              "discount": {
+                "description": "The discount amount for the order line",
+                "type": "number"
+              }
+            },
+            "additionalProperties": false,
+            "type": "object"
+          },
+          "description": "Products in the order",
+          "type": "array"
+        },
+        "amount": {
+          "properties": {
+            "local": {
+              "properties": {
+                "exchangeRate": {
+                  "description": "The exchange rate between the default currency and the local currency for the event",
+                  "type": "number"
+                },
+                "currency": {
+                  "description": "The transaction currency",
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false,
+              "description": "The locally selected currency",
+              "type": "object"
+            },
+            "discount": {
+              "description": "The total discount amount",
+              "type": "number"
+            },
+            "tax": {
+              "description": "The total tax amount",
+              "type": "number"
+            },
+            "shipping": {
+              "description": "The shipping cost",
+              "type": "number"
+            },
+            "revenue": {
+              "description": "The revenue is calculated by multiplying the sales price of the products or services by the quantity of units sold",
+              "type": "number"
+            },
+            "total": {
+              "description": "The total is calculated by adding the revenue, shipping and tax amounts after removing any applicable discounts",
+              "type": "number"
+            }
+          },
+          "additionalProperties": false,
+          "description": "The transaction details",
+          "type": "object"
+        },
+        "paymentMethod": {
+          "enum": [
+            "cash",
+            "creditcard",
+            "debitcard",
+            "paypal",
+            "other"
+          ],
+          "description": "The chosen payment method",
+          "type": "string"
+        },
+        "storeCode": {
+          "description": "The store or affiliate where the transaction took place",
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "sale",
+            "return",
+            "sale-return"
+          ],
+          "description": "The order type",
+          "type": "string"
+        },
+        "orderId": {
+          "description": "The order or transaction ID",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer successfully completed an order or transaction",
+    "label": "Completed order",
+    "mode": "ACTIVE",
+    "type": "completedOrder",
+    "id": "completedOrder"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "pageTags": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The list of page tags",
+          "type": "array"
+        },
+        "pageCategories": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The list of page categories",
+          "type": "array"
+        },
+        "url": {
+          "format": "uri",
+          "description": "The page URL",
+          "type": "string"
+        },
+        "title": {
+          "description": "The page title",
+          "type": "string"
+        },
+        "search": {
+          "description": "The search parameters",
+          "type": "string"
+        },
+        "referer": {
+          "description": "The page referer",
+          "type": "string"
+        },
+        "path": {
+          "description": "The URL path to the page",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer viewed the page on a website or using an app",
+    "label": "Viewed page",
+    "mode": "ACTIVE",
+    "type": "viewedPage",
+    "id": "viewedPage"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "linkTags": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The list of link tags",
+          "type": "array"
+        },
+        "url": {
+          "format": "uri",
+          "description": "The link URL",
+          "type": "string"
+        },
+        "title": {
+          "description": "The link title",
+          "type": "string"
+        },
+        "search": {
+          "description": "The search parameters",
+          "type": "string"
+        },
+        "referer": {
+          "description": "The page referer",
+          "type": "string"
+        },
+        "path": {
+          "description": "The URL path to the page",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer clicked a link",
+    "label": "Clicked link",
+    "mode": "ACTIVE",
+    "type": "clickedLink",
+    "id": "clickedLink"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "data": {
+          "description": "All of the form data",
+          "type": "object"
+        },
+        "formId": {
+          "description": "The ID used to identify the form",
+          "type": "string"
+        },
+        "formName": {
+          "description": "The name used to identify the form",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer completed a form on the website, using an app, or during a fair",
+    "label": "Form compiled",
+    "mode": "ACTIVE",
+    "type": "formCompiled",
+    "id": "formCompiled"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "channel": {
+          "enum": [
+            "SMS",
+            "EMAIL",
+            "PUSH",
+            "FAX"
+          ],
+          "description": "The campaign medium",
+          "type": "string"
+        },
+        "campaignTags": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The list of campaign tags",
+          "type": "array"
+        },
+        "campaignName": {
+          "description": "The name used to identify the campaign",
+          "type": "string"
+        },
+        "campaignId": {
+          "description": "The ID used to identify the campaign",
+          "type": "string"
+        },
+        "campaignSubject": {
+          "description": "The campaign subject line",
+          "type": "string"
+        },
+        "subscriberId": {
+          "description": "The ID used to identify the subscriber",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer was sent a campaign",
+    "label": "Campaign sent",
+    "mode": "PASSIVE",
+    "type": "campaignSent",
+    "id": "campaignSent"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "channel": {
+          "enum": [
+            "SMS",
+            "EMAIL",
+            "PUSH",
+            "FAX"
+          ],
+          "description": "The campaign medium",
+          "type": "string"
+        },
+        "campaignTags": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The list of campaign tags",
+          "type": "array"
+        },
+        "campaignName": {
+          "description": "The name used to identify the campaign",
+          "type": "string"
+        },
+        "campaignId": {
+          "description": "The ID used to identify the campaign",
+          "type": "string"
+        },
+        "campaignSubject": {
+          "description": "The campaign subject line",
+          "type": "string"
+        },
+        "subscriberId": {
+          "description": "The ID used to identify the subscriber",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer opened a campaign that they received",
+    "label": "Campaign opened",
+    "mode": "ACTIVE",
+    "type": "campaignOpened",
+    "id": "campaignOpened"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "linkTags": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The list of link tags",
+          "type": "array"
+        },
+        "subscriberId": {
+          "description": "The ID used to identify the subscriber",
+          "type": "string"
+        },
+        "campaignSubject": {
+          "description": "The campaign subject line",
+          "type": "string"
+        },
+        "campaignId": {
+          "description": "The ID used to identify the campaign",
+          "type": "string"
+        },
+        "campaignName": {
+          "description": "The name used to identify the campaign",
+          "type": "string"
+        },
+        "campaignTags": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The list of campaign tags",
+          "type": "array"
+        },
+        "channel": {
+          "enum": [
+            "SMS",
+            "EMAIL",
+            "PUSH",
+            "FAX"
+          ],
+          "description": "The campaign medium",
+          "type": "string"
+        },
+        "linkId": {
+          "description": "The ID used to identify the link",
+          "type": "string"
+        },
+        "linkUrl": {
+          "format": "uri",
+          "description": "The online catalogue related to the product",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer clicked a link in a campaign that they received",
+    "label": "Campaign link clicked",
+    "mode": "ACTIVE",
+    "type": "campaignLinkClicked",
+    "id": "campaignLinkClicked"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "channel": {
+          "enum": [
+            "SMS",
+            "EMAIL",
+            "PUSH",
+            "FAX"
+          ],
+          "description": "The campaign medium",
+          "type": "string"
+        },
+        "campaignTags": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The list of campaign tags",
+          "type": "array"
+        },
+        "campaignName": {
+          "description": "The name used to identify the campaign",
+          "type": "string"
+        },
+        "campaignId": {
+          "description": "The ID used to identify the campaign",
+          "type": "string"
+        },
+        "campaignSubject": {
+          "description": "The campaign subject line",
+          "type": "string"
+        },
+        "subscriberId": {
+          "description": "The ID used to identify the subscriber",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer marked a campaign that they received as spam",
+    "label": "Campaign marked spam",
+    "mode": "ACTIVE",
+    "type": "campaignMarkedSpam",
+    "id": "campaignMarkedSpam"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "channel": {
+          "enum": [
+            "SMS",
+            "EMAIL",
+            "PUSH",
+            "FAX"
+          ],
+          "description": "The campaign medium",
+          "type": "string"
+        },
+        "campaignTags": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The list of campaign tags",
+          "type": "array"
+        },
+        "campaignName": {
+          "description": "The name used to identify the campaign",
+          "type": "string"
+        },
+        "campaignId": {
+          "description": "The ID used to identify the campaign",
+          "type": "string"
+        },
+        "campaignSubject": {
+          "description": "The campaign subject line",
+          "type": "string"
+        },
+        "subscriberId": {
+          "description": "The ID used to identify the subscriber",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "A notice has been received from an email server that identifies a campaign as undeliverable",
+    "label": "Campaign bounced",
+    "mode": "ACTIVE",
+    "type": "campaignBounced",
+    "id": "campaignBounced"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "subscriberId": {
+          "description": "The ID used to identify the subscriber",
+          "type": "string"
+        },
+        "campaignSubject": {
+          "description": "The campaign subject line",
+          "type": "string"
+        },
+        "campaignId": {
+          "description": "The ID used to identify the campaign",
+          "type": "string"
+        },
+        "campaignName": {
+          "description": "The name used to identify the campaign",
+          "type": "string"
+        },
+        "campaignTags": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The list of campaign tags",
+          "type": "array"
+        },
+        "channel": {
+          "enum": [
+            "SMS",
+            "EMAIL",
+            "PUSH",
+            "FAX"
+          ],
+          "description": "The campaign medium",
+          "type": "string"
+        },
+        "listId": {
+          "description": "The ID used to identify the list",
+          "type": "string"
+        },
+        "listName": {
+          "description": "The name used to identify the list",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer unsubscribed from the list",
+    "label": "Campaign unsubscribed",
+    "mode": "ACTIVE",
+    "type": "campaignUnsubscribed",
+    "id": "campaignUnsubscribed"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "subscriberId": {
+          "description": "The ID used to identify the subscriber",
+          "type": "string"
+        },
+        "campaignSubject": {
+          "description": "The campaign subject line",
+          "type": "string"
+        },
+        "campaignId": {
+          "description": "The ID used to identify the campaign",
+          "type": "string"
+        },
+        "campaignName": {
+          "description": "The name used to identify the campaign",
+          "type": "string"
+        },
+        "campaignTags": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The list of campaign tags",
+          "type": "array"
+        },
+        "channel": {
+          "enum": [
+            "SMS",
+            "EMAIL",
+            "PUSH",
+            "FAX"
+          ],
+          "description": "The campaign medium",
+          "type": "string"
+        },
+        "listId": {
+          "description": "The ID used to identify the list",
+          "type": "string"
+        },
+        "listName": {
+          "description": "The name used to identify the list",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer was added to the suppression list (blacklist)",
+    "label": "Campaign blacklisted",
+    "mode": "ACTIVE",
+    "type": "campaignBlacklisted",
+    "id": "campaignBlacklisted"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "channel": {
+          "enum": [
+            "SMS",
+            "EMAIL",
+            "PUSH",
+            "FAX"
+          ],
+          "description": "The campaign medium",
+          "type": "string"
+        },
+        "listName": {
+          "description": "The name used to identify the list",
+          "type": "string"
+        },
+        "listId": {
+          "description": "The ID used to identify the list",
+          "type": "string"
+        },
+        "subscriberId": {
+          "description": "The ID used to identify the subscriber",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer subscribed to the list",
+    "label": "Campaign subscribed",
+    "mode": "ACTIVE",
+    "type": "campaignSubscribed",
+    "id": "campaignSubscribed"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "eventDate": {
+          "format": "date-time",
+          "description": "The date and time of the event",
+          "type": "string"
+        },
+        "eventName": {
+          "description": "The name used to identify the event",
+          "type": "string"
+        },
+        "eventId": {
+          "description": "The ID used to identify the event",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer was invited to an event",
+    "label": "Event invited",
+    "mode": "PASSIVE",
+    "type": "eventInvited",
+    "id": "eventInvited"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "eventDate": {
+          "format": "date-time",
+          "description": "The date and time of the event",
+          "type": "string"
+        },
+        "eventName": {
+          "description": "The name used to identify the event",
+          "type": "string"
+        },
+        "eventId": {
+          "description": "The ID used to identify the event",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer has taken part in an event",
+    "label": "Event participated",
+    "mode": "ACTIVE",
+    "type": "eventParticipated",
+    "id": "eventParticipated"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "resultCount": {
+          "description": "The number of results",
+          "type": "number"
+        },
+        "keyword": {
+          "description": "The search keyword",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer carried out a search using the web site or an app",
+    "label": "Searched",
+    "mode": "ACTIVE",
+    "type": "searched",
+    "id": "searched"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "newValue": {
+          "description": "The new property value",
+          "type": "string"
+        },
+        "oldValue": {
+          "description": "The old property value",
+          "type": "string"
+        },
+        "setting": {
+          "enum": [
+            "LANGUAGE",
+            "TIMEZONE",
+            "CURRENCY",
+            "EMAIL",
+            "PASSWORD",
+            "USERNAME",
+            "OTHER"
+          ],
+          "description": "The setting that was changed",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer changed a setting using the web site or an app",
+    "label": "Changed setting",
+    "mode": "ACTIVE",
+    "type": "changedSetting",
+    "id": "changedSetting"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "name": {
+          "description": "The name used to identify the event",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer made an active event uncovered",
+    "label": "Generic active event",
+    "mode": "ACTIVE",
+    "type": "genericActiveEvent",
+    "id": "genericActiveEvent"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "name": {
+          "description": "The name used to identify the event",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer made a passive event uncovered",
+    "label": "Generic passive event",
+    "mode": "PASSIVE",
+    "type": "genericPassiveEvent",
+    "id": "genericPassiveEvent"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "endDate": {
+          "format": "date-time",
+          "description": "The date and time of the end of the service subscription",
+          "type": "string"
+        },
+        "startDate": {
+          "format": "date-time",
+          "description": "The date and time of the start of the service subscription",
+          "type": "string"
+        },
+        "serviceType": {
+          "description": "The type of service",
+          "type": "string"
+        },
+        "serviceName": {
+          "description": "The name used to identify the service",
+          "type": "string"
+        },
+        "serviceId": {
+          "description": "The ID used to identify the service",
+          "type": "string"
+        },
+        "subscriberId": {
+          "description": "The ID used to identify the subscriber",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer unsubscribed from a service subscription",
+    "label": "Service unsubscribed",
+    "mode": "ACTIVE",
+    "type": "serviceUnsubscribed",
+    "id": "serviceUnsubscribed"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "endDate": {
+          "format": "date-time",
+          "description": "The date and time of the end of the service subscription",
+          "type": "string"
+        },
+        "startDate": {
+          "format": "date-time",
+          "description": "The date and time of the start of the service subscription",
+          "type": "string"
+        },
+        "serviceType": {
+          "description": "The type of service",
+          "type": "string"
+        },
+        "serviceName": {
+          "description": "The name used to identify the service",
+          "type": "string"
+        },
+        "serviceId": {
+          "description": "The ID used to identify the service",
+          "type": "string"
+        },
+        "subscriberId": {
+          "description": "The ID used to identify the subscriber",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer subscribed to a service subscription",
+    "label": "Service subscribed",
+    "mode": "ACTIVE",
+    "type": "serviceSubscribed",
+    "id": "serviceSubscribed"
+  },
+  {
+    "enabled": false,
+    "propertiesSchema": {
+      "properties": {
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
+        },
+        "products": {
+          "items": {
+            "properties": {
+				"classifications": {
+				  "items": {
+					"properties": {
+					  "value": {
+						"description": "The classification value",
+						"type": "string"
+					  },
+					  "key": {
+						"description": "The classification key",
+						"type": "string"
+					  }
+					},
+					"additionalProperties": false,
+					"type": "object"
+				  },
+				  "description": "The list of classifications for the product",
+				  "type": "array"
+				},
+              "category": {
+                "items": {
+                  "type": "string"
+                },
+                "description": "The list of categories for the product",
+                "type": "array"
+              },
+              "shortDescription": {
+                "description": "The short description of the product",
+                "type": "string"
+              },
+              "linkUrl": {
+                "format": "uri",
+                "description": "The online catalogue related to the product",
+                "type": "string"
+              },
+              "imageUrl": {
+                "format": "uri",
+                "description": "The online catalogue image for the product",
+                "type": "string"
+              },
+              "coupon": {
+                "description": "The coupon code associated with a product",
+                "type": "string"
+              },
+              "tax": {
+                "description": "The tax for the order line",
+                "type": "number"
+              },
+              "id": {
+                "description": "The product database ID",
+                "type": "string"
+              },
+              "type": {
+                "enum": [
+                  "sale",
+                  "return"
+                ],
+                "description": "The order line type",
+                "type": "string"
+              },
+              "sku": {
+                "description": "The product SKU",
+                "type": "string"
+              },
+              "name": {
+                "description": "The product name",
+                "type": "string"
+              },
+              "price": {
+                "description": "The product price",
+                "type": "number"
+              },
+              "subtotal": {
+                "description": "The total amount for the order line",
+                "type": "number"
+              },
+              "quantity": {
+                "description": "The product quantity",
+                "type": "number"
+              },
+              "discount": {
+                "description": "The discount amount for the order line",
+                "type": "number"
+              }
+            },
+            "additionalProperties": false,
+            "type": "object"
+          },
+          "description": "The transaction details",
+          "type": "array"
+        },
+        "amount": {
+          "properties": {
+            "local": {
+              "properties": {
+                "exchangeRate": {
+                  "description": "The exchange rate between the default currency and the local currency for the event",
+                  "type": "number"
+                },
+                "currency": {
+                  "description": "The transaction currency",
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false,
+              "description": "The locally selected currency",
+              "type": "object"
+            },
+            "discount": {
+              "description": "The total discount amount",
+              "type": "number"
+            },
+            "tax": {
+              "description": "The total tax amount",
+              "type": "number"
+            },
+            "shipping": {
+              "description": "The shipping cost",
+              "type": "number"
+            },
+            "revenue": {
+              "description": "The revenue is calculated by multiplying the sales price of the products or services by the quantity of units sold",
+              "type": "number"
+            },
+            "total": {
+              "description": "The total is calculated by adding the revenue, shipping and tax amounts after removing any applicable discounts",
+              "type": "number"
+            }
+          },
+          "additionalProperties": false,
+          "description": "The transaction details",
+          "type": "object"
+        },
+        "storeCode": {
+          "description": "The store or affiliate where the transaction took place",
+          "type": "string"
+        },
+        "abandonedCartUrl": {
+          "format": "uri",
+          "description": "The URL to recover the abandoned cart",
+          "type": "string"
+        },
+        "orderId": {
+          "description": "The order or transaction ID",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer added a product to their cart but did not complete the order or transaction",
+    "label": "Abandoned cart",
+    "mode": "ACTIVE",
+    "type": "abandonedCart",
+    "id": "abandonedCart"
+  }
+]
