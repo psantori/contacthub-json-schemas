@@ -1,60 +1,38 @@
-{
-  "$schema": "http://api.contactlab.it/hub#",
-  "type": "object",
-  "description": "The customer opened a ticket to a customer care",
-  "properties": {
-    "customerId": {
-      "type": "string",
-      "pattern": "^.+$"
-    },
-    "bringBackProperties": {
-      "$ref": "resource:/public/schema/enums.json#/definitions/EventBringBackProperties"
-    },
-    "type": {
-      "$ref": "resource:/public/schema/enums.json#/definitions/EventType"
-    },
-    "context": {
-      "$ref": "resource:/public/schema/enums.json#/definitions/EventContext"
-    },
-    "date": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "contextInfo": {
-      "$ref": "resource:/public/schema/enums.json#/definitions/EventContextInfo"
-    },
-    "properties": {
-      "type": "object",
+  {
+    "enabled": false,
+    "propertiesSchema": {
       "properties": {
-        "ticketId": {
-          "type": "string",
-          "description": "The ID used to identify the ticket"
-        },
-        "category": {
-          "type": "array",
-          "description": "Categories list of ticket",
-          "items": {
-            "type": "string"
-          }
-        },
-        "subject": {
-          "type": "string",
-          "description": "The subject of ticket"
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
         },
         "text": {
-          "type": "string",
-          "description": "The text of ticket"
+          "description": "The ticket text",
+          "type": "string"
         },
-        "extraProperties": {
-          "type": "object",
-          "description": "Extra pieces of information you can tie to events you track"
+        "subject": {
+          "description": "The ticket subject",
+          "type": "string"
+        },
+        "category": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The list of ticket categories",
+          "type": "array"
+        },
+        "ticketId": {
+          "description": "The ID used to identify the ticket",
+          "type": "string"
         }
-      }
-    }
-  },
-  "required": [
-    "type",
-    "context"
-  ],
-  "additionalProperties": false
-}
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer opened a ticket with customer care",
+    "label": "Opened ticket",
+    "mode": "ACTIVE",
+    "type": "openedTicket",
+    "id": "openedTicket"
+  }

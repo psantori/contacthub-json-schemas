@@ -1,189 +1,167 @@
-{
-  "$schema": "http://api.contactlab.it/hub#",
-  "type": "object",
-  "description": "Customer added product to cart but not completed the order/transaction",
-  "properties": {
-    "customerId": {
-      "type": "string",
-      "pattern": "^.+$"
-    },
-    "bringBackProperties": {
-      "$ref": "resource:/public/schema/enums.json#/definitions/EventBringBackProperties"
-    },
-    "type": {
-      "$ref": "resource:/public/schema/enums.json#/definitions/EventType"
-    },
-    "context": {
-      "$ref": "resource:/public/schema/enums.json#/definitions/EventContext"
-    },
-    "date": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "contextInfo": {
-      "$ref": "resource:/public/schema/enums.json#/definitions/EventContextInfo"
-    },
-    "properties": {
-      "type": "object",
+  {
+    "enabled": false,
+    "propertiesSchema": {
       "properties": {
-        "orderId": {
-          "type": "string",
-          "description": "Order/Transaction ID"
-        },
-        "abandonedCartUrl": {
-          "type": "string",
-          "description": "The URL to recover the abandoned cart",
-          "format": "uri"
-        },
-        "storeCode": {
-          "type": "string",
-          "description": "Store or affiliation from which this transaction occurred"
-        },
-        "amount": {
-          "type": "object",
-          "description": "Details of transaction",
-          "additionalProperties": false,
-          "properties": {
-            "total": {
-              "type": "number",
-              "description": "Total is calculated adding revenue, shipping and tax amount and eliminating discounts amount"
-            },
-            "revenue": {
-              "type": "number",
-              "description": "Revenue is calculated by multiplying the price at which products or services are sold by the number of units or amount sold"
-            },
-            "shipping": {
-              "type": "number",
-              "description": "Shipping cost"
-            },
-            "tax": {
-              "type": "number",
-              "description": "Total tax amount"
-            },
-            "discount": {
-              "type": "number",
-              "description": "Total discount amount"
-            },
-            "local": {
-              "type": "object",
-              "description": "Currency local section",
-              "additionalProperties": false,
-              "properties": {
-                "currency": {
-                  "type": "string",
-                  "description": "Currency of the transaction"
-                },
-                "exchangeRate": {
-                  "type": "number",
-                  "description": "Rate of exchange currency between default currency to local currency of the event"
-                }
-              }
-            }
-          }
+        "extraProperties": {
+          "description": "Additional information that you can link to tracked events",
+          "type": "object"
         },
         "products": {
-          "type": "array",
-          "description": "Details of transaction",
           "items": {
-            "type": "object",
-            "additionalProperties": false,
             "properties": {
-              "discount": {
-                "type": "number",
-                "description": "The discount amount of order line"
+				"classifications": {
+				  "items": {
+					"properties": {
+					  "value": {
+						"description": "The classification value",
+						"type": "string"
+					  },
+					  "key": {
+						"description": "The classification key",
+						"type": "string"
+					  }
+					},
+					"additionalProperties": false,
+					"type": "object"
+				  },
+				  "description": "The list of classifications for the product",
+				  "type": "array"
+				},
+              "category": {
+                "items": {
+                  "type": "string"
+                },
+                "description": "The list of categories for the product",
+                "type": "array"
               },
-              "quantity": {
-                "type": "number",
-                "description": "Quantity of a product"
+              "shortDescription": {
+                "description": "The short description of the product",
+                "type": "string"
               },
-              "subtotal": {
-                "type": "number",
-                "description": "The total amount of order line"
+              "linkUrl": {
+                "format": "uri",
+                "description": "The online catalogue related to the product",
+                "type": "string"
               },
-              "price": {
-                "type": "number",
-                "description": "Price of the product"
+              "imageUrl": {
+                "format": "uri",
+                "description": "The online catalogue image for the product",
+                "type": "string"
               },
-              "name": {
-                "type": "string",
-                "description": "Name of the product"
+              "coupon": {
+                "description": "The coupon code associated with a product",
+                "type": "string"
               },
-              "sku": {
-                "type": "string",
-                "description": "Sku of the product"
+              "tax": {
+                "description": "The tax for the order line",
+                "type": "number"
+              },
+              "id": {
+                "description": "The product database ID",
+                "type": "string"
               },
               "type": {
-                "type": "string",
-                "description": "The type of order line",
                 "enum": [
                   "sale",
                   "return"
-                ]
+                ],
+                "description": "The order line type",
+                "type": "string"
               },
-              "classifications": {
-                "type": "array",
-                "description": "The list of classifications of the product",
-                "items": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "key": {
-                      "type": "string",
-                      "description": "The key of the classification"
-                    },
-                    "value": {
-                      "type": "string",
-                      "description": "The value of the classification"
-                    }
-                  }
-                }
+              "sku": {
+                "description": "The product SKU",
+                "type": "string"
               },
-              "category": {
-                "type": "array",
-                "description": "Categories list of the product",
-                "items": {
+              "name": {
+                "description": "The product name",
+                "type": "string"
+              },
+              "price": {
+                "description": "The product price",
+                "type": "number"
+              },
+              "subtotal": {
+                "description": "The total amount for the order line",
+                "type": "number"
+              },
+              "quantity": {
+                "description": "The product quantity",
+                "type": "number"
+              },
+              "discount": {
+                "description": "The discount amount for the order line",
+                "type": "number"
+              }
+            },
+            "additionalProperties": false,
+            "type": "object"
+          },
+          "description": "The transaction details",
+          "type": "array"
+        },
+        "amount": {
+          "properties": {
+            "local": {
+              "properties": {
+                "exchangeRate": {
+                  "description": "The exchange rate between the default currency and the local currency for the event",
+                  "type": "number"
+                },
+                "currency": {
+                  "description": "The transaction currency",
                   "type": "string"
                 }
               },
-              "shortDescription": {
-                "type": "string",
-                "description": "Short description of the product"
-              },
-              "linkUrl": {
-                "type": "string",
-                "description": "The online catalogue of the product",
-                "format": "uri"
-              },
-              "imageUrl": {
-                "type": "string",
-                "description": "The image of online catalogue of the product",
-                "format": "uri"
-              },
-              "coupon": {
-                "type": "string",
-                "description": "Coupon code associated with a product"
-              },
-              "tax": {
-                "type": "number",
-                "description": "The tax associated with the order line"
-              },
-              "id": {
-                "type": "string",
-                "description": "Database id of the product"
-              }
+              "additionalProperties": false,
+              "description": "The locally selected currency",
+              "type": "object"
+            },
+            "discount": {
+              "description": "The total discount amount",
+              "type": "number"
+            },
+            "tax": {
+              "description": "The total tax amount",
+              "type": "number"
+            },
+            "shipping": {
+              "description": "The shipping cost",
+              "type": "number"
+            },
+            "revenue": {
+              "description": "The revenue is calculated by multiplying the sales price of the products or services by the quantity of units sold",
+              "type": "number"
+            },
+            "total": {
+              "description": "The total is calculated by adding the revenue, shipping and tax amounts after removing any applicable discounts",
+              "type": "number"
             }
-          }
+          },
+          "additionalProperties": false,
+          "description": "The transaction details",
+          "type": "object"
         },
-        "extraProperties": {
-          "type": "object",
-          "description": "Extra pieces of information you can tie to events you track"
+        "storeCode": {
+          "description": "The store or affiliate where the transaction took place",
+          "type": "string"
+        },
+        "abandonedCartUrl": {
+          "format": "uri",
+          "description": "The URL to recover the abandoned cart",
+          "type": "string"
+        },
+        "orderId": {
+          "description": "The order or transaction ID",
+          "type": "string"
         }
-      }
-    }
-  },
-  "required": [
-    "type",
-    "context"
-  ],
-  "additionalProperties": false
-}
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "description": "The customer added a product to their cart but did not complete the order or transaction",
+    "label": "Abandoned cart",
+    "mode": "ACTIVE",
+    "type": "abandonedCart",
+    "id": "abandonedCart"
+  }

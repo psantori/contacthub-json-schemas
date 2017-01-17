@@ -1,7 +1,7 @@
 {
   "$schema": "http://api.contactlab.it/hub#",
   "type": "object",
-  "description": "The customer completed successfully an order/transaction",
+  "description": "Customer added product to cart but not completed the order/transaction",
   "properties": {
     "customerId": {
       "type": "string",
@@ -30,29 +30,14 @@
           "type": "string",
           "description": "Order/Transaction ID"
         },
-        "type": {
+        "abandonedCartUrl": {
           "type": "string",
-          "description": "Type of order",
-          "enum": [
-            "sale",
-            "return",
-            "sale-return"
-          ]
+          "description": "The URL to recover the abandoned cart",
+          "format": "uri"
         },
         "storeCode": {
           "type": "string",
           "description": "Store or affiliation from which this transaction occurred"
-        },
-        "paymentMethod": {
-          "type": "string",
-          "description": "The payment method chosen",
-          "enum": [
-            "cash",
-            "creditcard",
-            "debitcard",
-            "paypal",
-            "other"
-          ]
         },
         "amount": {
           "type": "object",
@@ -98,7 +83,7 @@
         },
         "products": {
           "type": "array",
-          "description": "Products in the order",
+          "description": "Details of transaction",
           "items": {
             "type": "object",
             "additionalProperties": false,

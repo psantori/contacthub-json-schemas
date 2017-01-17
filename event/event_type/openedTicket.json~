@@ -1,7 +1,7 @@
 {
   "$schema": "http://api.contactlab.it/hub#",
   "type": "object",
-  "description": "Customer compiled a form on the website/app/convention",
+  "description": "The customer opened a ticket to a customer care",
   "properties": {
     "customerId": {
       "type": "string",
@@ -26,17 +26,24 @@
     "properties": {
       "type": "object",
       "properties": {
-        "formName": {
+        "ticketId": {
           "type": "string",
-          "description": "The name to identify the form"
+          "description": "The ID used to identify the ticket"
         },
-        "formId": {
+        "category": {
+          "type": "array",
+          "description": "Categories list of ticket",
+          "items": {
+            "type": "string"
+          }
+        },
+        "subject": {
           "type": "string",
-          "description": "The id to identify the form"
+          "description": "The subject of ticket"
         },
-        "data": {
-          "type": "object",
-          "description": "The entire form data"
+        "text": {
+          "type": "string",
+          "description": "The text of ticket"
         },
         "extraProperties": {
           "type": "object",

@@ -1,7 +1,7 @@
 {
   "$schema": "http://api.contactlab.it/hub#",
   "type": "object",
-  "description": "Customer searched on website/app",
+  "description": "The Agent of customer care replied to ticket from a customer",
   "properties": {
     "customerId": {
       "type": "string",
@@ -26,13 +26,24 @@
     "properties": {
       "type": "object",
       "properties": {
-        "keyword": {
+        "ticketId": {
           "type": "string",
-          "description": "Key of search"
+          "description": "The ID used to identify the ticket"
         },
-        "resultCount": {
-          "type": "number",
-          "description": "Number of results"
+        "category": {
+          "type": "array",
+          "description": "Categories list of ticket",
+          "items": {
+            "type": "string"
+          }
+        },
+        "subject": {
+          "type": "string",
+          "description": "The subject of ticket"
+        },
+        "text": {
+          "type": "string",
+          "description": "The text of ticket"
         },
         "extraProperties": {
           "type": "object",
