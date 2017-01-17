@@ -1,0 +1,82 @@
+{
+  "$schema": "http://api.contactlab.it/hub#",
+  "type": "object",
+  "description": "Customer went to blacklist",
+  "properties": {
+    "customerId": {
+      "type": "string",
+      "pattern": "^.+$"
+    },
+    "bringBackProperties": {
+      "$ref": "resource:/public/schema/enums.json#/definitions/EventBringBackProperties"
+    },
+    "type": {
+      "$ref": "resource:/public/schema/enums.json#/definitions/EventType"
+    },
+    "context": {
+      "$ref": "resource:/public/schema/enums.json#/definitions/EventContext"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "contextInfo": {
+      "$ref": "resource:/public/schema/enums.json#/definitions/EventContextInfo"
+    },
+    "properties": {
+      "type": "object",
+      "properties": {
+        "listName": {
+          "type": "string",
+          "description": "Name used to identify a list"
+        },
+        "extraProperties": {
+          "type": "object",
+          "description": "Extra pieces of information you can tie to events you track"
+        },
+        "subscriberId": {
+          "type": "string",
+          "description": "An ID used to identify the subscriber"
+        },
+        "campaignSubject": {
+          "type": "string",
+          "description": "The campaign’s subject line"
+        },
+        "campaignId": {
+          "type": "string",
+          "description": "An id used to identify a campaign"
+        },
+        "campaignName": {
+          "type": "string",
+          "description": "A name used to identify a campaign"
+        },
+        "campaignTags": {
+          "type": "array",
+          "description": "The list of campaign's tags",
+          "items": {
+            "type": "string"
+          }
+        },
+        "channel": {
+          "type": "string",
+          "description": "The campaign medium",
+          "enum": [
+            "SMS",
+            "EMAIL",
+            "PUSH",
+            "FAX"
+          ]
+        },
+        "listId": {
+          "type": "string",
+          "description": "Id used to identify a list"
+        }
+      }
+    }
+  },
+  "required": [
+    "type",
+    "context"
+  ],
+  "additionalProperties": false
+}

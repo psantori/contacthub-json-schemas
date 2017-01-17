@@ -1,0 +1,90 @@
+{
+  "$schema": "http://api.contactlab.it/hub#",
+  "type": "object",
+  "description": "Customer opened a link in a campaign received",
+  "properties": {
+    "customerId": {
+      "type": "string",
+      "pattern": "^.+$"
+    },
+    "bringBackProperties": {
+      "$ref": "resource:/public/schema/enums.json#/definitions/EventBringBackProperties"
+    },
+    "type": {
+      "$ref": "resource:/public/schema/enums.json#/definitions/EventType"
+    },
+    "context": {
+      "$ref": "resource:/public/schema/enums.json#/definitions/EventContext"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "contextInfo": {
+      "$ref": "resource:/public/schema/enums.json#/definitions/EventContextInfo"
+    },
+    "properties": {
+      "type": "object",
+      "properties": {
+        "linkUrl": {
+          "type": "string",
+          "description": "The online catalogue of the product",
+          "format": "uri"
+        },
+        "linkId": {
+          "type": "string",
+          "description": "The id to identify the link"
+        },
+        "extraProperties": {
+          "type": "object",
+          "description": "Extra pieces of information you can tie to events you track"
+        },
+        "linkTags": {
+          "type": "array",
+          "description": "The list of link tags",
+          "items": {
+            "type": "string"
+          }
+        },
+        "subscriberId": {
+          "type": "string",
+          "description": "An ID used to identify the subscriber"
+        },
+        "campaignSubject": {
+          "type": "string",
+          "description": "The campaign’s subject line"
+        },
+        "campaignId": {
+          "type": "string",
+          "description": "An id used to identify a campaign"
+        },
+        "campaignName": {
+          "type": "string",
+          "description": "A name used to identify a campaign"
+        },
+        "campaignTags": {
+          "type": "array",
+          "description": "The list of campaign's tags",
+          "items": {
+            "type": "string"
+          }
+        },
+        "channel": {
+          "type": "string",
+          "description": "The campaign medium",
+          "enum": [
+            "SMS",
+            "EMAIL",
+            "PUSH",
+            "FAX"
+          ]
+        }
+      }
+    }
+  },
+  "required": [
+    "type",
+    "context"
+  ],
+  "additionalProperties": false
+}

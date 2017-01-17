@@ -1,0 +1,96 @@
+{
+  "$schema": "http://api.contactlab.it/hub#",
+  "type": "object",
+  "description": "Customer added a product to comparator",
+  "properties": {
+    "customerId": {
+      "type": "string",
+      "pattern": "^.+$"
+    },
+    "bringBackProperties": {
+      "$ref": "resource:/public/schema/enums.json#/definitions/EventBringBackProperties"
+    },
+    "type": {
+      "$ref": "resource:/public/schema/enums.json#/definitions/EventType"
+    },
+    "context": {
+      "$ref": "resource:/public/schema/enums.json#/definitions/EventContext"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "contextInfo": {
+      "$ref": "resource:/public/schema/enums.json#/definitions/EventContextInfo"
+    },
+    "properties": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "array",
+          "description": "Categories list of the product",
+          "items": {
+            "type": "string"
+          }
+        },
+        "shortDescription": {
+          "type": "string",
+          "description": "Short description of the product"
+        },
+        "extraProperties": {
+          "type": "object",
+          "description": "Extra pieces of information you can tie to events you track"
+        },
+        "classifications": {
+          "type": "array",
+          "description": "The list of classifications of the product",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "key": {
+                "type": "string",
+                "description": "The key of the classification"
+              },
+              "value": {
+                "type": "string",
+                "description": "The value of the classification"
+              }
+            }
+          }
+        },
+        "id": {
+          "type": "string",
+          "description": "Database id of the product"
+        },
+        "sku": {
+          "type": "string",
+          "description": "The sku of the product"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the product"
+        },
+        "price": {
+          "type": "number",
+          "description": "Price of the product"
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "The image of online catalogue of the product",
+          "format": "uri"
+        },
+        "linkUrl": {
+          "type": "string",
+          "description": "The online catalogue of the product",
+          "format": "uri"
+        }
+      }
+    }
+  },
+  "required": [
+    "type",
+    "context"
+  ],
+  "additionalProperties": false
+}

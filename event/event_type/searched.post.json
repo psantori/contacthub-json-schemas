@@ -1,0 +1,49 @@
+{
+  "$schema": "http://api.contactlab.it/hub#",
+  "type": "object",
+  "description": "Customer searched on website/app",
+  "properties": {
+    "customerId": {
+      "type": "string",
+      "pattern": "^.+$"
+    },
+    "bringBackProperties": {
+      "$ref": "resource:/public/schema/enums.json#/definitions/EventBringBackProperties"
+    },
+    "type": {
+      "$ref": "resource:/public/schema/enums.json#/definitions/EventType"
+    },
+    "context": {
+      "$ref": "resource:/public/schema/enums.json#/definitions/EventContext"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "contextInfo": {
+      "$ref": "resource:/public/schema/enums.json#/definitions/EventContextInfo"
+    },
+    "properties": {
+      "type": "object",
+      "properties": {
+        "keyword": {
+          "type": "string",
+          "description": "Key of search"
+        },
+        "resultCount": {
+          "type": "number",
+          "description": "Number of results"
+        },
+        "extraProperties": {
+          "type": "object",
+          "description": "Extra pieces of information you can tie to events you track"
+        }
+      }
+    }
+  },
+  "required": [
+    "type",
+    "context"
+  ],
+  "additionalProperties": false
+}
