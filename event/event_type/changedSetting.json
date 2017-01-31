@@ -1,1 +1,24 @@
-{"$schema":"http://api.contactlab.it/hub#","type":"object","additionalProperties":false,"properties":{"setting":{"type":"string","description":"The setting changed","enum":["LANGUAGE","TIMEZONE","CURRENCY","EMAIL","PASSWORD","USERNAME","OTHER"]},"oldValue":{"type":"string","description":"The old value of property"},"newValue":{"type":"string","description":"The new value of property"},"extraProperties":{"type":"object","description":"Extra pieces of information you can tie to events you track"}}}
+{
+	"$schema": "http://api.contactlab.it/hub#",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"setting": {
+			"type": "string",
+			"description": "The setting changed",
+			"enum": ["LANGUAGE", "TIMEZONE", "CURRENCY", "EMAIL", "PASSWORD", "USERNAME", "OTHER"]
+		},
+		"oldValue": {
+			"type": "string",
+			"description": "The old value of property"
+		},
+		"newValue": {
+			"type": "string",
+			"description": "The new value of property"
+		},
+		"extraProperties": {
+			"type": "object",
+			"description": "Extra pieces of information you can tie to events you track"
+		}
+	}
+}
