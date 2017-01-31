@@ -1,1 +1,19 @@
-{"$schema":"http://api.contactlab.it/hub#","type":"object","additionalProperties":false,"properties":{"keyword":{"type":"string","description":"Key of search"},"resultCount":{"type":"number","description":"Number of results"},"extraProperties":{"type":"object","description":"Extra pieces of information you can tie to events you track"}}}
+{
+	"$schema": "http://api.contactlab.it/hub#",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"keyword": {
+			"type": "string",
+			"description": "Key of search"
+		},
+		"resultCount": {
+			"type": "number",
+			"description": "Number of results"
+		},
+		"extraProperties": {
+			"type": "object",
+			"description": "Extra pieces of information you can tie to events you track"
+		}
+	}
+}
