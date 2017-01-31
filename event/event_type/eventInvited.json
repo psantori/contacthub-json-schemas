@@ -1,1 +1,24 @@
-{"$schema":"http://api.contactlab.it/hub#","type":"object","additionalProperties":false,"properties":{"eventId":{"type":"string","description":"The idenfier of the event"},"eventName":{"type":"string","description":"The name of the event"},"eventDate":{"type":"string","description":"The date-time of the event","format":"date-time"},"extraProperties":{"type":"object","description":"Extra pieces of information you can tie to events you track"}}}
+{
+	"$schema": "http://api.contactlab.it/hub#",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"eventId": {
+			"type": "string",
+			"description": "The idenfier of the event"
+		},
+		"eventName": {
+			"type": "string",
+			"description": "The name of the event"
+		},
+		"eventDate": {
+			"type": "string",
+			"description": "The date-time of the event",
+			"format": "date-time"
+		},
+		"extraProperties": {
+			"type": "object",
+			"description": "Extra pieces of information you can tie to events you track"
+		}
+	}
+}
