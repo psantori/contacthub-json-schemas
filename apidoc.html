@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JSON Schema Template</title>
+  <link rel="icon" href="static/images/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="bower_components/ikonograph/dist/ikonograph.min.css">
+
+  <style>
+    .menu-content,
+    .redoc-wrap {
+      top: 70px !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Heade -->
+  <header class="Header">
+    <div class="Header--Product">
+      <a href="index.htm"><img height="20" class="Header__logo" draggable="false" src="static/images/contacthub.svg" alt="Contacthub" /></a>
+      <h4 class="Header__slogan">Developer Reference</h4>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="Navigation">
+      <a href="index.htm" class="Navigation__link">Home</a>
+      <a href="apidoc.html" class="Navigation__link is-active">API Documentation</a>
+      <a href="schemas/index.html" class="Navigation__link">Schemas</a>
+    </nav>
+  </header>
+
+  <main class="AppShell AppShell--Display">
+    <redoc style="background-color: #ffffff;" spec-url='swagger/contacthub-swagger-1.0.yaml'></redoc>
+  </main>
+
+  <script src="bower_components/redoc/dist/redoc.min.js"> </script>
+</body>
+</html>
