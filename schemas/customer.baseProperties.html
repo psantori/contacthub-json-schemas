@@ -396,19 +396,19 @@
 <td><code>"Africa/Abidjan"</code></td>
 </tr>
 <tr>
-<td>contacts</td>
+<td><a href="#contacts">contacts</a></td>
 <td><em>object, null</em></td>
 <td>The contact information for the customer</td>
 <td><code>{...}</code></td>
 </tr>
 <tr>
-<td>address</td>
+<td><a href="#address">address</a></td>
 <td><em>object, null</em></td>
 <td>The address details of the customer</td>
 <td><code>{...}</code></td>
 </tr>
 <tr>
-<td>credential</td>
+<td><a href="#credential">credential</a></td>
 <td><em>object, null</em></td>
 <td>The customer login credentials</td>
 <td><code>{...}</code></td>
@@ -426,7 +426,7 @@
 <td><code>[{...}, {...}]</code></td>
 </tr>
 <tr>
-<td>socialProfile</td>
+<td><a href="#socialprofile">socialProfile</a></td>
 <td><em>object, null</em></td>
 <td>The social profiles of the customer</td>
 <td><code>{...}</code></td>
@@ -446,8 +446,248 @@
 </tbody>
 </table>
 <hr />
-<h2 id="educations">educations</h2>
+<h2 id="contacts">contacts</h2>
+<h4 id="typeobjectnull">Type: object,null</h4>
+<p><em>The contact information for the customer</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>email</td>
+<td><em>string, null</em></td>
+<td>The e-mail address of the customer<br/><strong>format:</strong> <code>email</code></td>
+<td><code>"firstname.lastname@example.com"</code></td>
+</tr>
+<tr>
+<td>fax</td>
+<td><em>string, null</em></td>
+<td>The fax number of the customer</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>mobilePhone</td>
+<td><em>string, null</em></td>
+<td>The mobile phone number of the customer</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>phone</td>
+<td><em>string, null</em></td>
+<td>The phone number of the customer</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td><a href="#othercontacts">otherContacts</a></td>
+<td><em>array[object]</em></td>
+<td>The list of additional contact details for the customer</td>
+<td><code>[{...}, {...}]</code></td>
+</tr>
+<tr>
+<td><a href="#mobiledevices">mobileDevices</a></td>
+<td><em>array[object]</em></td>
+<td>The list of mobile devices belonging to the customer</td>
+<td><code>[{...}, {...}]</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="othercontacts">otherContacts</h2>
 <h4 id="typeobject-1">Type: object</h4>
+<p><em>&nbsp;</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td><em>string</em></td>
+<td>The name of an additional contact entry for the customer</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>type</td>
+<td><em>string, null</em></td>
+<td>The type of additional contact entry for the customer<br/><strong>one of:</strong> <code>"MOBILE"</code>, <code>"PHONE"</code>, <code>"EMAIL"</code>, <code>"FAX"</code>, <code>"OTHER"</code></td>
+<td><code>"MOBILE"</code></td>
+</tr>
+<tr>
+<td>value</td>
+<td><em>string</em></td>
+<td>The value of the additional contact entry for the customer</td>
+<td><code>"example"</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="mobiledevices">mobileDevices</h2>
+<h4 id="typeobject-2">Type: object</h4>
+<p><em>&nbsp;</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>identifier</td>
+<td><em>string</em></td>
+<td></td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>appId</td>
+<td><em>string</em></td>
+<td></td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>name</td>
+<td><em>string</em></td>
+<td></td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>type</td>
+<td><em>string, null</em></td>
+<td><br/><strong>one of:</strong> <code>"IOS"</code>, <code>"ANDROID"</code>, <code>"WINDOWS_PHONE"</code>, <code>"FIREOS"</code></td>
+<td><code>"IOS"</code></td>
+</tr>
+<tr>
+<td>notificationService</td>
+<td><em>string, null</em></td>
+<td>APN -&gt; Apple Push Notification Service; GCM -&gt; Google Cloud Messaging; WNS -&gt; Windows Push Notification Services; ADM -&gt; Amazon Device Messaging; SNS -&gt; Amazon Simple Notification Service<br/><strong>one of:</strong> <code>"APN"</code>, <code>"GCM"</code>, <code>"WNS"</code>, <code>"ADM"</code>, <code>"SNS"</code></td>
+<td><code>"APN"</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="address">address</h2>
+<h4 id="typeobjectnull-1">Type: object,null</h4>
+<p><em>The address details of the customer</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>street</td>
+<td><em>string, null</em></td>
+<td>The customer address street component</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>city</td>
+<td><em>string, null</em></td>
+<td>The customer address city component</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>country</td>
+<td><em>string, null</em></td>
+<td>The customer address country component</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>province</td>
+<td><em>string, null</em></td>
+<td>The customer address province component</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>zip</td>
+<td><em>string, null</em></td>
+<td>The customer address zip code component</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td><a href="#geo">geo</a></td>
+<td><em>object, null</em></td>
+<td>The geographic location of the customer</td>
+<td><code>{...}</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="geo">geo</h2>
+<h4 id="typeobjectnull-2">Type: object,null</h4>
+<p><em>The geographic location of the customer</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lat</td>
+<td><em>number, null</em></td>
+<td>The latitude coordinate for the customer</td>
+<td><code>42.0</code></td>
+</tr>
+<tr>
+<td>lon</td>
+<td><em>number, null</em></td>
+<td>The longitude coordinate for the customer</td>
+<td><code>42.0</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="credential">credential</h2>
+<h4 id="typeobjectnull-3">Type: object,null</h4>
+<p><em>The customer login credentials</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>password</td>
+<td><em>string, null</em></td>
+<td>The password of the customer</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>username</td>
+<td><em>string, null</em></td>
+<td>The username of the customer</td>
+<td><code>"example"</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="educations">educations</h2>
+<h4 id="typeobject-3">Type: object</h4>
 <p><em>&nbsp;</em></p>
 <table>
 <thead>
@@ -505,7 +745,7 @@
 </table>
 <hr />
 <h2 id="likes">likes</h2>
-<h4 id="typeobject-2">Type: object</h4>
+<h4 id="typeobject-4">Type: object</h4>
 <p><em>&nbsp;</em></p>
 <table>
 <thead>
@@ -544,8 +784,60 @@
 </tbody>
 </table>
 <hr />
+<h2 id="socialprofile">socialProfile</h2>
+<h4 id="typeobjectnull-4">Type: object,null</h4>
+<p><em>The social profiles of the customer</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>facebook</td>
+<td><em>string, null</em></td>
+<td>The Facebook profile of the customer</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>google</td>
+<td><em>string, null</em></td>
+<td>The Google+ profile of the customer</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>instagram</td>
+<td><em>string, null</em></td>
+<td>The Instagram profile of the customer</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>linkedin</td>
+<td><em>string, null</em></td>
+<td>The Linkedin profile of the customer</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>qzone</td>
+<td><em>string, null</em></td>
+<td>The Qzone profile of the customer</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>twitter</td>
+<td><em>string, null</em></td>
+<td>The Twitter profile of the customer</td>
+<td><code>"example"</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h2 id="jobs">jobs</h2>
-<h4 id="typeobject-3">Type: object</h4>
+<h4 id="typeobject-5">Type: object</h4>
 <p><em>&nbsp;</em></p>
 <table>
 <thead>
@@ -603,7 +895,7 @@
 </table>
 <hr />
 <h2 id="subscriptions">subscriptions</h2>
-<h4 id="typeobject-4">Type: object</h4>
+<h4 id="typeobject-6">Type: object</h4>
 <p><em>&nbsp;</em></p>
 <table>
 <thead>
@@ -685,7 +977,7 @@
 </table>
 <hr />
 <h2 id="preferences">preferences</h2>
-<h4 id="typeobject-5">Type: object</h4>
+<h4 id="typeobject-7">Type: object</h4>
 <p><em>&nbsp;</em></p>
 <table>
 <thead>
