@@ -11,8 +11,7 @@
 			],
 			"format": "uri",
 			"contactlabProperties": {
-				"label": "Picture",
-				"enabled": true
+				"label": "Picture"
 			}
 		},
 		"title": {
@@ -22,8 +21,7 @@
 				"null"
 			],
 			"contactlabProperties": {
-				"label": "Title",
-				"enabled": true
+				"label": "Title"
 			}
 		},
 		"prefix": {
@@ -33,8 +31,7 @@
 				"null"
 			],
 			"contactlabProperties": {
-				"label": "Prefix",
-				"enabled": true
+				"label": "Prefix"
 			}
 		},
 		"firstName": {
@@ -44,8 +41,7 @@
 				"null"
 			],
 			"contactlabProperties": {
-				"label": "First name",
-				"enabled": true
+				"label": "First name"
 			}
 		},
 		"lastName": {
@@ -55,8 +51,7 @@
 				"null"
 			],
 			"contactlabProperties": {
-				"label": "Last name",
-				"enabled": true
+				"label": "Last name"
 			}
 		},
 		"middleName": {
@@ -66,8 +61,7 @@
 				"null"
 			],
 			"contactlabProperties": {
-				"label": "Middle name",
-				"enabled": true
+				"label": "Middle name"
 			}
 		},
 		"gender": {
@@ -78,8 +72,7 @@
 			],
 			"contactlabProperties": {
 				"label": "Gender",
-				"notAnalyzed": true,
-				"enabled": true
+				"notAnalyzed": true
 			}
 		},
 		"dob": {
@@ -90,8 +83,7 @@
 			],
 			"format": "date",
 			"contactlabProperties": {
-				"label": "dob",
-				"enabled": true
+				"label": "dob"
 			}
 		},
 		"locale": {
@@ -102,8 +94,7 @@
 			],
 			"pattern": "^[a-z]{2}(_([a-zA-Z]{2}){1,2})?_[A-Z]{2}$",
 			"contactlabProperties": {
-				"label": "Locale",
-				"enabled": true
+				"label": "Locale"
 			}
 		},
 		"timezone": {
@@ -457,14 +448,12 @@
 				"Pacific/Wallis"
 			],
 			"contactlabProperties": {
-				"label": "Time zone",
-				"enabled": true
+				"label": "Time zone"
 			}
 		},
 		"contacts": {
 			"contactlabProperties": {
-				"label": "Contacts",
-				"enabled": true
+				"label": "Contacts"
 			},
 			"description": "The contact information for the customer",
 			"type": [
@@ -481,8 +470,7 @@
 					],
 					"format": "email",
 					"contactlabProperties": {
-						"label": "Email",
-						"enabled": true
+						"label": "Email"
 					}
 				},
 				"fax": {
@@ -492,8 +480,7 @@
 						"null"
 					],
 					"contactlabProperties": {
-						"label": "Fax number",
-						"enabled": true
+						"label": "Fax number"
 					}
 				},
 				"mobilePhone": {
@@ -503,8 +490,7 @@
 						"null"
 					],
 					"contactlabProperties": {
-						"label": "Mobile number",
-						"enabled": true
+						"label": "Mobile number"
 					}
 				},
 				"phone": {
@@ -514,8 +500,7 @@
 						"null"
 					],
 					"contactlabProperties": {
-						"label": "Phone number",
-						"enabled": true
+						"label": "Phone number"
 					}
 				},
 				"otherContacts": {
@@ -550,8 +535,7 @@
 						}
 					},
 					"contactlabProperties": {
-						"label": "Other contacts",
-						"enabled": true
+						"label": "Other contacts"
 					}
 				},
 				"mobileDevices": {
@@ -607,8 +591,7 @@
 		},
 		"address": {
 			"contactlabProperties": {
-				"label": "Address",
-				"enabled": true
+				"label": "Address"
 			},
 			"description": "The address details of the customer",
 			"type": [
@@ -624,8 +607,7 @@
 						"null"
 					],
 					"contactlabProperties": {
-						"label": "Street",
-						"enabled": true
+						"label": "Street"
 					}
 				},
 				"city": {
@@ -635,8 +617,7 @@
 						"null"
 					],
 					"contactlabProperties": {
-						"label": "City",
-						"enabled": true
+						"label": "City"
 					}
 				},
 				"country": {
@@ -646,8 +627,7 @@
 						"null"
 					],
 					"contactlabProperties": {
-						"label": "Country",
-						"enabled": true
+						"label": "Country"
 					}
 				},
 				"province": {
@@ -657,8 +637,7 @@
 						"null"
 					],
 					"contactlabProperties": {
-						"label": "Province",
-						"enabled": true
+						"label": "Province"
 					}
 				},
 				"zip": {
@@ -668,14 +647,12 @@
 						"null"
 					],
 					"contactlabProperties": {
-						"label": "zip",
-						"enabled": true
+						"label": "zip"
 					}
 				},
 				"geo": {
 					"contactlabProperties": {
-						"label": "Geographic localization",
-						"enabled": true
+						"label": "Geographic localization"
 					},
 					"description": "The geographic location of the customer",
 					"type": [
@@ -704,8 +681,7 @@
 		},
 		"credential": {
 			"contactlabProperties": {
-				"label": "Credential",
-				"enabled": true
+				"label": "Credential"
 			},
 			"description": "The customer login credentials",
 			"type": [
@@ -721,8 +697,7 @@
 						"null"
 					],
 					"contactlabProperties": {
-						"label": "Password",
-						"enabled": true
+						"label": "Password"
 					}
 				},
 				"username": {
@@ -732,8 +707,7 @@
 						"null"
 					],
 					"contactlabProperties": {
-						"label": "User name",
-						"enabled": true
+						"label": "User name"
 					}
 				}
 			}
@@ -741,31 +715,125 @@
 		"educations": {
 			"description": "The education history of the customer",
 			"contactlabProperties": {
-				"label": "Educations",
-				"enabled": true
+				"label": "Educations"
 			},
 			"type": "array",
 			"items": {
-				"$ref": "resource:/public/schema/base-property/education.json",
-				"additionalProperties": false
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": [
+							"string"
+						],
+						"contactlabProperties": {
+							"notAnalyzed": true
+						},
+						"description": "The ID used to identify the education establishment"
+					},
+					"schoolType": {
+						"type": [
+							"string",
+							"null"
+						],
+						"enum": [
+							"PRIMARY_SCHOOL",
+							"SECONDARY_SCHOOL",
+							"HIGH_SCHOOL",
+							"COLLEGE",
+							"OTHER"
+						],
+						"description": "The type of education establishment"
+					},
+					"schoolName": {
+						"type": [
+							"string",
+							"null"
+						],
+						"description": "The name of the education establishment"
+					},
+					"schoolConcentration": {
+						"type": [
+							"string",
+							"null"
+						],
+						"description": "The study concentration or core subjects"
+					},
+					"startYear": {
+						"type": [
+							"integer",
+							"null"
+						],
+						"description": "The year study began"
+					},
+					"endYear": {
+						"type": [
+							"integer",
+							"null"
+						],
+						"description": "The year study ended"
+					},
+					"isCurrent": {
+						"type": [
+							"boolean",
+							"null"
+						],
+						"description": "The flag that defines whether the study is current"
+					}
+				},
+				"required": [
+					"id"
+				]
 			}
 		},
 		"likes": {
 			"description": "The likes list of the customer",
 			"contactlabProperties": {
-				"label": "Likes",
-				"enabled": true
+				"label": "Likes"
 			},
 			"type": "array",
 			"items": {
-				"$ref": "resource:/public/schema/base-property/like.json",
-				"additionalProperties": false
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": [
+							"string"
+						],
+						"contactlabProperties": {
+							"notAnalyzed": true
+						},
+						"description": "The ID used to identify the like"
+					},
+					"category": {
+						"type": [
+							"string",
+							"null"
+						],
+						"description": "The category of the like"
+					},
+					"name": {
+						"type": [
+							"string",
+							"null"
+						],
+						"description": "The name of the like"
+					},
+					"createdTime": {
+						"type": [
+							"string",
+							"null"
+						],
+						"format": "date-time",
+						"description": "The date the like was created"
+					}
+				},
+				"required": [
+					"id"
+				]
 			}
 		},
 		"socialProfile": {
 			"contactlabProperties": {
-				"label": "Social profile",
-				"enabled": true
+				"label": "Social profile"
 			},
 			"description": "The social profiles of the customer",
 			"type": [
@@ -781,8 +849,7 @@
 						"null"
 					],
 					"contactlabProperties": {
-						"label": "Facebook",
-						"enabled": true
+						"label": "Facebook"
 					}
 				},
 				"google": {
@@ -792,8 +859,7 @@
 						"null"
 					],
 					"contactlabProperties": {
-						"label": "Google plus",
-						"enabled": true
+						"label": "Google plus"
 					}
 				},
 				"instagram": {
@@ -803,8 +869,7 @@
 						"null"
 					],
 					"contactlabProperties": {
-						"label": "Instagram",
-						"enabled": true
+						"label": "Instagram"
 					}
 				},
 				"linkedin": {
@@ -814,8 +879,7 @@
 						"null"
 					],
 					"contactlabProperties": {
-						"label": "Linkedin",
-						"enabled": true
+						"label": "Linkedin"
 					}
 				},
 				"qzone": {
@@ -825,8 +889,7 @@
 						"null"
 					],
 					"contactlabProperties": {
-						"label": "Qzone",
-						"enabled": true
+						"label": "Qzone"
 					}
 				},
 				"twitter": {
@@ -836,8 +899,7 @@
 						"null"
 					],
 					"contactlabProperties": {
-						"label": "Twitter",
-						"enabled": true
+						"label": "Twitter"
 					}
 				}
 			}
