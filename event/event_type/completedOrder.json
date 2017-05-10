@@ -1,7 +1,7 @@
 {
 	"$schema": "http://api.contactlab.it/hub#",
 	"type": "object",
-	"description": "The customer completed successfully an order/transaction"
+	"description": "The customer completed successfully an order/transaction",
 	"additionalProperties": false,
 	"properties": {
 		"orderId": {
