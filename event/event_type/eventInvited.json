@@ -1,6 +1,7 @@
 {
 	"$schema": "http://api.contactlab.it/hub#",
 	"type": "object",
+        "description": "Customer was invited at an event",
 	"additionalProperties": false,
 	"properties": {
 		"eventId": {
@@ -15,6 +16,116 @@
 			"type": "string",
 			"description": "The date-time of the event",
 			"format": "date-time"
+		},
+		"eventType": {
+			"type": "string",
+			"description": "The type of the event (e.g.: Cocktail, Meeting, etc)"
+		},
+		"eventLocation": {
+			"type": ["object", "null"],
+			"description": "The location of the event",
+			"contactlabProperties": {
+				"label": "Event Location",
+				"enabled": true
+			},
+			"properties": {
+				"type": {
+					"type": ["string", "null"],
+					"enum": ["STORE", "VENUE", "STADIUM", "MUSEUM", "HEADQUARTERS", "PALACE", "CLUB", "ROOM", "OTHER"],
+					"description": "The type of location",
+					"contactlabProperties": {
+						"label": "The location type",
+						"enabled": true
+					}
+				},
+				"id": {
+					"type": "string",
+					"description": "The idenfier of the location",
+					"contactlabProperties": {
+						"label": "The location identifier",
+						"enabled": true
+					}
+				},
+				"name": {
+					"type": "string",
+					"description": "The name of the location",
+					"contactlabProperties": {
+						"label": "The location name",
+						"enabled": true
+					}
+				},
+				"address": {
+					"type": ["object", "null"],
+					"description": "The address details of the location",
+					"contactlabProperties": {
+						"label": "Address",
+						"enabled": true
+					},
+					"additionalProperties": false,
+					"properties": {
+						"street": {
+							"type": ["string", "null"],
+							"description": "The location address street component",
+							"contactlabProperties": {
+								"label": "Street",
+								"enabled": true
+							}
+						},
+						"city": {
+							"type": ["string", "null"],
+							"description": "The location address city component",
+							"contactlabProperties": {
+								"label": "City",
+								"enabled": true
+							}
+						},
+						"country": {
+							"type": ["string", "null"],
+							"description": "The location address country component",
+							"contactlabProperties": {
+								"label": "Country",
+								"enabled": true
+							}
+						},
+						"province": {
+							"type": ["string", "null"],
+							"description": "The location address province component",
+							"contactlabProperties": {
+								"label": "Province",
+								"enabled": true
+							}
+						},
+						"region": {
+							"type": ["string", "null"],
+							"description": "The location address region component",
+							"contactlabProperties": {
+								"label": "Region",
+								"enabled": true
+							}
+						},
+						"zip": {
+							"type": ["string", "null"],
+							"description": "The location address ZIP code component",
+							"contactlabProperties": {
+								"label": "ZIP",
+								"enabled": true
+							}
+						},
+						"geo": {
+							"contactlabProperties": {
+								"label": "Geographic location",
+								"enabled": true
+							},
+							"oneOf": [{
+								"type": "null"
+							}, {
+								"$ref": "https://api.contactlab.it/hub/v1/docs/schema/enums.json#/definitions/GeographicLocation"
+							}],
+							"description": "The geographic coordinate of the location"
+						}
+					}
+				}
+			}
 		},
 		"extraProperties": {
 			"type": "object",
