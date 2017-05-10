@@ -2,6 +2,7 @@
 	"$schema": "http://api.contactlab.it/hub#",
 	"type": "object",
 	"additionalProperties": false,
+  	"description": "Customer unsubscribed from a service subscription",	
 	"properties": {
 		"subscriberId": {
 			"type": "string",
