@@ -2,6 +2,7 @@
 	"$schema": "http://api.contactlab.it/hub#",
 	"type": "object",
 	"additionalProperties": false,
+  	"description": "Customer reviewed a product",
 	"properties": {
 		"category": {
 			"type": "array",
