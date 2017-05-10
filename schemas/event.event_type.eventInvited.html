@@ -174,9 +174,44 @@
                 </li>
               
                 <li>
+                  <a class="SidebarMenu__Link SidebarMenu__Link  is-indent level-3" href="event.event_type.eventConfirmed.html">
+                    <span class="clab-icon icon-file"></span>
+                    eventConfirmed
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="SidebarMenu__Link SidebarMenu__Link  is-indent level-3" href="event.event_type.eventDeclined.html">
+                    <span class="clab-icon icon-file"></span>
+                    eventDeclined
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="SidebarMenu__Link SidebarMenu__Link  is-indent level-3" href="event.event_type.eventEligible.html">
+                    <span class="clab-icon icon-file"></span>
+                    eventEligible
+                  </a>
+                </li>
+              
+                <li>
                   <a class="SidebarMenu__Link SidebarMenu__Link is-active is-indent level-3" href="event.event_type.eventInvited.html">
                     <span class="clab-icon icon-file"></span>
                     eventInvited
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="SidebarMenu__Link SidebarMenu__Link  is-indent level-3" href="event.event_type.eventNoShow.html">
+                    <span class="clab-icon icon-file"></span>
+                    eventNoShow
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="SidebarMenu__Link SidebarMenu__Link  is-indent level-3" href="event.event_type.eventNotInvited.html">
+                    <span class="clab-icon icon-file"></span>
+                    eventNotInvited
                   </a>
                 </li>
               
@@ -324,7 +359,7 @@
       <section class="AppShell__Content hr-h4-margin-swap">
 <h2 id="eventinvited">eventInvited</h2>
 <h4 id="typeobject">Type: object</h4>
-<p><em>&nbsp;</em></p>
+<p><em>Customer was invited at an event</em></p>
 <table>
 <thead>
 <tr>
@@ -354,10 +389,120 @@
 <td><code>"1970-01-01T12:00:00Z"</code></td>
 </tr>
 <tr>
+<td>eventType</td>
+<td><em>string</em></td>
+<td>The type of the event (e.g.: Cocktail, Meeting, etc)</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td><a href="#eventlocation">eventLocation</a></td>
+<td><em>object, null</em></td>
+<td>The location of the event</td>
+<td><code>{...}</code></td>
+</tr>
+<tr>
 <td><a href="#extraproperties">extraProperties</a></td>
 <td><em>object</em></td>
 <td>Extra pieces of information you can tie to events you track</td>
 <td><code>{...}</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="eventlocation">eventLocation</h2>
+<h4 id="typeobjectnull">Type: object,null</h4>
+<p><em>The location of the event</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td><em>string, null</em></td>
+<td>The type of location<br/><strong>one of:</strong> <code>"STORE"</code>, <code>"VENUE"</code>, <code>"STADIUM"</code>, <code>"MUSEUM"</code>, <code>"HEADQUARTERS"</code>, <code>"PALACE"</code>, <code>"CLUB"</code>, <code>"ROOM"</code>, <code>"OTHER"</code></td>
+<td><code>"STORE"</code></td>
+</tr>
+<tr>
+<td>id</td>
+<td><em>string</em></td>
+<td>The idenfier of the location</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>name</td>
+<td><em>string</em></td>
+<td>The name of the location</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td><a href="#address">address</a></td>
+<td><em>object, null</em></td>
+<td>The address details of the location</td>
+<td><code>{...}</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="address">address</h2>
+<h4 id="typeobjectnull-1">Type: object,null</h4>
+<p><em>The address details of the location</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>street</td>
+<td><em>string, null</em></td>
+<td>The location address street component</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>city</td>
+<td><em>string, null</em></td>
+<td>The location address city component</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>country</td>
+<td><em>string, null</em></td>
+<td>The location address country component</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>province</td>
+<td><em>string, null</em></td>
+<td>The location address province component</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>region</td>
+<td><em>string, null</em></td>
+<td>The location address region component</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>zip</td>
+<td><em>string, null</em></td>
+<td>The location address ZIP code component</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>geo</td>
+<td><em>undefined</em></td>
+<td>The geographic coordinate of the location</td>
+<td>``</td>
 </tr>
 </tbody>
 </table>
