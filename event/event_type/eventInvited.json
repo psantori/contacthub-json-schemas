@@ -1,7 +1,7 @@
 {
 	"$schema": "http://api.contactlab.it/hub#",
 	"type": "object",
-        "description": "Customer was invited at an event",
+	"description": "Customer was invited at an event",
 	"additionalProperties": false,
 	"properties": {
 		"eventId": {
@@ -119,7 +119,27 @@
 							"oneOf": [{
 								"type": "null"
 							}, {
-								"$ref": "https://api.contactlab.it/hub/v1/docs/schema/enums.json#/definitions/GeographicLocation"
+								"type": "object",
+								"description": "The geographic location",
+								"properties": {
+									"lat": {
+										"type": "number",
+										"minimum": -90,
+										"maximum": 90,
+										"description": "The latitude"
+									},
+									"lon": {
+										"type": "number",
+										"minimum": -180,
+										"maximum": 180,
+										"description": "The longitude"
+									}
+								},
+								"required": [
+									"lat",
+									"lon"
+								],
+								"additionalProperties": false
 							}],
 							"description": "The geographic coordinate of the location"
 						}
