@@ -2,6 +2,7 @@
 	"$schema": "http://api.contactlab.it/hub#",
 	"type": "object",
 	"additionalProperties": false,
+  	"description": "The customer data structure included in Contacthub",	
 	"properties": {
 		"pictureUrl": {
 			"description": "The URL of the customer picture",
