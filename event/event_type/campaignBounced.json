@@ -2,6 +2,7 @@
 	"$schema": "http://api.contactlab.it/hub#",
 	"type": "object",
 	"additionalProperties": false,
+	"description": "Notice from an email server that a campaign is undeliverable",
 	"properties": {
 		"subscriberId": {
 			"type": "string",
