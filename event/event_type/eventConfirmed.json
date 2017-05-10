@@ -1,7 +1,7 @@
 {
 	"$schema": "http://api.contactlab.it/hub#",
 	"type": "object",
-        "description": "Customer has confirmed the invite for the event",
+	"description": "Customer has confirmed the invite for the event",
 	"additionalProperties": false,
 	"properties": {
 		"eventId": {
@@ -22,7 +22,10 @@
 			"description": "The type of the event (e.g.: Cocktail, Meeting, etc)"
 		},
 		"eventLocation": {
-			"type": ["object", "null"],
+			"type": [
+				"object",
+				"null"
+			],
 			"description": "The location of the event",
 			"contactlabProperties": {
 				"label": "Event Location",
@@ -30,8 +33,21 @@
 			},
 			"properties": {
 				"type": {
-					"type": ["string", "null"],
-					"enum": ["STORE", "VENUE", "STADIUM", "MUSEUM", "HEADQUARTERS", "PALACE", "CLUB", "ROOM", "OTHER"],
+					"type": [
+						"string",
+						"null"
+					],
+					"enum": [
+						"STORE",
+						"VENUE",
+						"STADIUM",
+						"MUSEUM",
+						"HEADQUARTERS",
+						"PALACE",
+						"CLUB",
+						"ROOM",
+						"OTHER"
+					],
 					"description": "The type of location",
 					"contactlabProperties": {
 						"label": "The location type",
@@ -55,7 +71,10 @@
 					}
 				},
 				"address": {
-					"type": ["object", "null"],
+					"type": [
+						"object",
+						"null"
+					],
 					"description": "The address details of the location",
 					"contactlabProperties": {
 						"label": "Address",
@@ -64,7 +83,10 @@
 					"additionalProperties": false,
 					"properties": {
 						"street": {
-							"type": ["string", "null"],
+							"type": [
+								"string",
+								"null"
+							],
 							"description": "The location address street component",
 							"contactlabProperties": {
 								"label": "Street",
@@ -72,7 +94,10 @@
 							}
 						},
 						"city": {
-							"type": ["string", "null"],
+							"type": [
+								"string",
+								"null"
+							],
 							"description": "The location address city component",
 							"contactlabProperties": {
 								"label": "City",
@@ -80,7 +105,10 @@
 							}
 						},
 						"country": {
-							"type": ["string", "null"],
+							"type": [
+								"string",
+								"null"
+							],
 							"description": "The location address country component",
 							"contactlabProperties": {
 								"label": "Country",
@@ -88,7 +116,10 @@
 							}
 						},
 						"province": {
-							"type": ["string", "null"],
+							"type": [
+								"string",
+								"null"
+							],
 							"description": "The location address province component",
 							"contactlabProperties": {
 								"label": "Province",
@@ -96,7 +127,10 @@
 							}
 						},
 						"region": {
-							"type": ["string", "null"],
+							"type": [
+								"string",
+								"null"
+							],
 							"description": "The location address region component",
 							"contactlabProperties": {
 								"label": "Region",
@@ -104,7 +138,10 @@
 							}
 						},
 						"zip": {
-							"type": ["string", "null"],
+							"type": [
+								"string",
+								"null"
+							],
 							"description": "The location address ZIP code component",
 							"contactlabProperties": {
 								"label": "ZIP",
@@ -117,30 +154,32 @@
 								"enabled": true
 							},
 							"oneOf": [{
-								"type": "null"
-							}, {
-								"type": "object",
-								"description": "The geographic location",
-								"properties": {
-									"lat": {
-										"type": "number",
-										"minimum": -90,
-										"maximum": 90,
-										"description": "The latitude"
-									},
-									"lon": {
-										"type": "number",
-										"minimum": -180,
-										"maximum": 180,
-										"description": "The longitude"
-									}
+									"type": "null"
 								},
-								"required": [
-									"lat",
-									"lon"
-								],
-								"additionalProperties": false
-							}],
+								{
+									"type": "object",
+									"description": "The geographic location",
+									"properties": {
+										"lat": {
+											"type": "number",
+											"minimum": -90,
+											"maximum": 90,
+											"description": "The latitude"
+										},
+										"lon": {
+											"type": "number",
+											"minimum": -180,
+											"maximum": 180,
+											"description": "The longitude"
+										}
+									},
+									"required": [
+										"lat",
+										"lon"
+									],
+									"additionalProperties": false
+								}
+							],
 							"description": "The geographic coordinate of the location"
 						}
 					}
