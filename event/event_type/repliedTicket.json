@@ -2,6 +2,7 @@
 	"$schema": "http://api.contactlab.it/hub#",
 	"type": "object",
 	"additionalProperties": false,
+  	"description": "The Agent of customer care replied to ticket from a customer",	
 	"properties": {
 		"ticketId": {
 			"type": "string",
