@@ -1,6 +1,7 @@
 {
 	"$schema": "http://api.contactlab.it/hub#",
 	"type": "object",
+	"description": "Customer added a product to comparator",
 	"additionalProperties": false,
 	"properties": {
 		"category": {
