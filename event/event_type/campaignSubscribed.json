@@ -1,6 +1,7 @@
 {
 	"$schema": "http://api.contactlab.it/hub#",
 	"type": "object",
+  	"description": "Customer subscribed a list",
 	"additionalProperties": false,
 	"properties": {
 		"subscriberId": {
