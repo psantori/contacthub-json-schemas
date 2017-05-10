@@ -1,6 +1,7 @@
 {
 	"$schema": "http://api.contactlab.it/hub#",
 	"type": "object",
+	"description": "Customer clicked a link",
 	"additionalProperties": false,
 	"properties": {
 		"path": {
