@@ -1,6 +1,7 @@
 {
 	"$schema": "http://api.contactlab.it/hub#",
 	"type": "object",
+        "description": "Customer added a product to their shopping cart",	
 	"additionalProperties": false,
 	"properties": {
 		"shortDescription": {
