@@ -1,7 +1,7 @@
 {
 	"$schema": "http://api.contactlab.it/hub#",
 	"type": "object",
-  "description": "Customer has confirmed the invite for the event",
+        "description": "Customer has participated to an event",
 	"additionalProperties": false,
 	"properties": {
 		"eventId": {
