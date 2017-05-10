@@ -1,6 +1,7 @@
 {
 	"$schema": "http://api.contactlab.it/hub#",
 	"type": "object",
+	"description": "Customer received a campaign",
 	"additionalProperties": false,
 	"properties": {
 		"subscriberId": {
