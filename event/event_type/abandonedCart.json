@@ -2,6 +2,7 @@
 	"$schema": "http://api.contactlab.it/hub#",
 	"type": "object",
 	"additionalProperties": false,
+	"description": "Customer added product to cart but not completed the order/transaction",
 	"properties": {
 		"orderId": {
 			"type": "string",
