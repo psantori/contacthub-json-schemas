@@ -90,10 +90,21 @@
 						"type": "string",
 						"description": "Sku of the product"
 					},
+					"vendor": {
+						"type": [
+							"string",
+							"null"
+						],
+						"description": "Vendor of the product"
+					},
 					"type": {
 						"type": "string",
 						"description": "The type of order line",
 						"enum": ["sale", "return"]
+					},
+					"orderLineId": {
+						"type": "integer",
+						"description": "Order line identifier"
 					},
 					"classifications": {
 						"type": "array",
@@ -145,6 +156,27 @@
 					"id": {
 						"type": "string",
 						"description": "Database id of the product"
+					},
+					"weight": {
+						"type": [
+							"number",
+							"null"
+						],
+						"description": "The weight of the product"
+					},
+					"itemQuantity": {
+						"type": [
+							"number",
+							"null"
+						],
+						"description": "The items quantity of the product"
+					},
+					"unitOfMeasure": {
+						"type": [
+							"string",
+							"null"
+						],
+						"description": "Unit of measure"
 					}
 				}
 			}
