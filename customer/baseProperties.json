@@ -631,6 +631,16 @@
 						"label": "Country"
 					}
 				},
+                "region": {
+                    "description": "The customer address region component",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "contactlabProperties": {
+                        "label": "Region"
+                    }
+                },				
 				"province": {
 					"description": "The customer address province component",
 					"type": [
