@@ -83,6 +83,13 @@
 						"type": "number",
 						"description": "Quantity of a product"
 					},
+					"unitOfMeasure": {
+						"type": [
+							"string",
+							"null"
+						],
+						"description": "Unit of measure"
+					},
 					"subtotal": {
 						"type": "number",
 						"description": "The total amount of order line"
