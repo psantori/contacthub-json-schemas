@@ -1,7 +1,7 @@
 {
 	"$schema": "http://api.contactlab.it/hub#",
 	"type": "object",
-        "description": "Customer added a product to their shopping cart",	
+	"description": "Customer added a product to their shopping cart",
 	"additionalProperties": false,
 	"properties": {
 		"shortDescription": {
@@ -55,6 +55,13 @@
 			"type": "string",
 			"description": "The sku of the product"
 		},
+		"vendor": {
+			"type": [
+				"string",
+				"null"
+			],
+			"description": "Vendor of the product"
+		},
 		"name": {
 			"type": "string",
 			"description": "Name of the product"
@@ -66,6 +73,27 @@
 		"quantity": {
 			"type": "number",
 			"description": "Quantity of a product"
+		},
+		"weight": {
+			"type": [
+				"number",
+				"null"
+			],
+			"description": "The weight of the product"
+		},
+		"itemQuantity": {
+			"type": [
+				"number",
+				"null"
+			],
+			"description": "The items quantity of the product"
+		},
+		"unitOfMeasure": {
+			"type": [
+				"string",
+				"null"
+			],
+			"description": "Unit of measure"
 		}
 	}
 }
