@@ -45,6 +45,13 @@
 			"type": "string",
 			"description": "The sku of the product"
 		},
+		"vendor": {
+			"type": [
+				"string",
+				"null"
+			],
+			"description": "Vendor of the product"
+		},
 		"name": {
 			"type": "string",
 			"description": "Name of the product"
@@ -62,6 +69,20 @@
 			"type": "string",
 			"description": "The online catalogue of the product",
 			"format": "uri"
+		},
+		"weight": {
+			"type": [
+				"number",
+				"null"
+			],
+			"description": "The weight of the product"
+		},
+		"itemQuantity": {
+			"type": [
+				"number",
+				"null"
+			],
+			"description": "The items quantity of the product"
 		}
 	}
 }
