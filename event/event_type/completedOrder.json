@@ -71,6 +71,10 @@
 				"type": "object",
 				"additionalProperties": false,
 				"properties": {
+					"orderLineId": {
+						"type": "integer",
+						"description": "Order line identifier"
+					},
 					"discount": {
 						"type": "number",
 						"description": "The discount amount of order line"
@@ -94,6 +98,13 @@
 					"sku": {
 						"type": "string",
 						"description": "Sku of the product"
+					},
+					"vendor": {
+						"type": [
+							"string",
+							"null"
+						],
+						"description": "Vendor of the product"
 					},
 					"type": {
 						"type": "string",
@@ -150,6 +161,14 @@
 					"id": {
 						"type": "string",
 						"description": "Database id of the product"
+					},
+					"weight": {
+						"type": "number/null",
+						"description": "The weight of the product"
+					},
+					"itemQuantity": {
+						"type": "number/null",
+						"description": "The items quantity of the product"
 					}
 				}
 			}
