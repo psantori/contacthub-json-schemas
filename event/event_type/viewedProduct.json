@@ -2,7 +2,7 @@
 	"$schema": "http://api.contactlab.it/hub#",
 	"type": "object",
 	"additionalProperties": false,
-  	"description": "Customer viewed a product details",	
+	"description": "Customer viewed a product details",
 	"properties": {
 		"category": {
 			"type": "array",
@@ -62,6 +62,27 @@
 			"type": "string",
 			"description": "The online catalogue of the product",
 			"format": "uri"
+		},
+		"weight": {
+			"type": [
+				"number",
+				"null"
+			],
+			"description": "The weight of the product"
+		},
+		"itemQuantity": {
+			"type": [
+				"number",
+				"null"
+			],
+			"description": "The items quantity of the product"
+		},
+		"vendor": {
+			"type": [
+				"string",
+				"null"
+			],
+			"description": "Vendor of the product"
 		}
 	}
 }
