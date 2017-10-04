@@ -22,6 +22,10 @@
 			"description": "The payment method chosen",
 			"enum": ["cash", "creditcard", "debitcard", "paypal", "other"]
 		},
+		"shippingMethod": {
+			"type": "string",
+			"description": "Shipping method chosen"
+		},		
 		"amount": {
 			"type": "object",
 			"description": "Details of transaction",
