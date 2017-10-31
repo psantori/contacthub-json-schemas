@@ -1,0 +1,99 @@
+		{
+			"id": "MOBILE",
+			"label": "Mobile event",
+			"description": "Events made in mobile context",
+			"propertiesSchema": {
+				"type": "object",
+				"$schema": "http://api.contactlab.it/hub#",
+				"additionalProperties": false,
+				"properties": {
+					"client": {
+						"type": "object",
+						"properties": {
+							"userAgent": {
+								"type": [
+									"string",
+									"null"
+								]
+							},
+							"ip": {
+								"type": "string",
+								"format": "ipv4"
+							},
+							"localization": {
+								"type": [
+									"object",
+									"null"
+								],
+								"properties": {
+									"city": {
+										"type": "string"
+									},
+									"country": {
+										"type": "string"
+									},
+									"region": {
+										"type": "string"
+									},
+									"province": {
+										"type": "string"
+									},
+									"zip": {
+										"type": "string"
+									},
+									"geo": {
+										"type": "object",
+										"properties": {
+											"lat": {
+												"type": "number",
+												"minimum": -90,
+												"maximum": 90,
+												"description": "latitude"
+											},
+											"lon": {
+												"type": "number",
+												"minimum": -180,
+												"maximum": 180,
+												"description": "longitude"
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					"device": {
+						"type": "object",
+						"properties": {
+							"bundleIdentifier": {
+								"type": "string"
+							},
+							"versionNumber": {
+								"type": "string"
+							},
+							"buildNumber": {
+								"type": "string"
+							},
+							"identifierForVendor": {
+								"type": "string"
+							},
+							"systemVersion": {
+								"type": "string"
+							},
+							"model": {
+								"type": "string"
+							},
+							"deviceVendor": {
+								"type": "string"
+							},
+							"locale": {
+								"type": "string"
+							},
+							"language": {
+								"type": "string"
+							}
+						}
+					}
+				}
+			}
+		}
