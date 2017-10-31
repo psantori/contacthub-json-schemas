@@ -1,0 +1,67 @@
+		{
+			"id": "CONTACT_CENTER",
+			"label": "Contact center event",
+			"description": "Events made in contact center context.",
+			"propertiesSchema": {
+				"$schema": "http://api.contactlab.it/hub#",
+				"type": "object",
+				"additionalProperties": false,
+				"properties": {
+					"client": {
+						"type": "object",
+						"properties": {
+							"userAgent": {
+								"type": [
+									"string",
+									"null"
+								]
+							},
+							"ip": {
+								"type": "string",
+								"format": "ipv4"
+							},
+							"localization": {
+								"type": [
+									"object",
+									"null"
+								],
+								"properties": {
+									"city": {
+										"type": "string"
+									},
+									"country": {
+										"type": "string"
+									},
+									"region": {
+										"type": "string"
+									},
+									"province": {
+										"type": "string"
+									},
+									"zip": {
+										"type": "string"
+									},
+									"geo": {
+										"type": "object",
+										"properties": {
+											"lat": {
+												"type": "number",
+												"minimum": -90,
+												"maximum": 90,
+												"description": "latitude"
+											},
+											"lon": {
+												"type": "number",
+												"minimum": -180,
+												"maximum": 180,
+												"description": "longitude"
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
