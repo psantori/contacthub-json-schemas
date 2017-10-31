@@ -1,0 +1,137 @@
+		{
+			"id": "RETAIL",
+			"label": "Retail event",
+			"description": "Events made in store context",
+			"propertiesSchema": {
+				"type": "object",
+				"$schema": "http://api.contactlab.it/hub#",
+				"additionalProperties": false,
+				"properties": {
+					"client": {
+						"type": "object",
+						"properties": {
+							"userAgent": {
+								"type": [
+									"string",
+									"null"
+								]
+							},
+							"ip": {
+								"type": "string",
+								"format": "ipv4"
+							},
+							"localization": {
+								"type": [
+									"object",
+									"null"
+								],
+								"properties": {
+									"city": {
+										"type": "string"
+									},
+									"country": {
+										"type": "string"
+									},
+									"region": {
+										"type": "string"
+									},
+									"province": {
+										"type": "string"
+									},
+									"zip": {
+										"type": "string"
+									},
+									"geo": {
+										"type": "object",
+										"properties": {
+											"lat": {
+												"type": "number",
+												"minimum": -90,
+												"maximum": 90,
+												"description": "latitude"
+											},
+											"lon": {
+												"type": "number",
+												"minimum": -180,
+												"maximum": 180,
+												"description": "longitude"
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					"store": {
+						"type": "object",
+						"properties": {
+							"id": {
+								"type": "string"
+							},
+							"name": {
+								"type": "string"
+							},
+							"type": {
+								"type": "string",
+								"enum": [
+									"AIRPORT",
+									"ECOMMERCE",
+									"FLAGSHIP",
+									"FREE-STANDING",
+									"MALL",
+									"OUTLET",
+									"RESORT",
+									"SIS",
+									"WAREHOUSE",
+									"NOT-DEFINED"
+								]
+							},
+							"street": {
+								"type": "string"
+							},
+							"city": {
+								"type": "string"
+							},
+							"country": {
+								"type": "string"
+							},
+							"province": {
+								"type": "string"
+							},
+							"region": {
+								"type": "string"
+							},
+							"zip": {
+								"type": "string"
+							},
+							"geo": {
+								"type": "object",
+								"description": "The geographic location",
+								"properties": {
+									"lat": {
+										"type": "number",
+										"minimum": -90,
+										"maximum": 90,
+										"description": "The latitude"
+									},
+									"lon": {
+										"type": "number",
+										"minimum": -180,
+										"maximum": 180,
+										"description": "The longitude"
+									}
+								},
+								"required": [
+									"lat",
+									"lon"
+								],
+								"additionalProperties": false
+							},
+							"website": {
+								"type": "string"
+							}
+						}
+					}
+				}
+			}
+		}
