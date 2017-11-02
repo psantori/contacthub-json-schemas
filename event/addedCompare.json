@@ -58,7 +58,7 @@
 		},
 		"price": {
 			"type": "number",
-			"description": "Price of the product"
+			"description": "Unit price of the product"
 		},
 		"imageUrl": {
 			"type": "string",
