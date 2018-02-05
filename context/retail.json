@@ -4,6 +4,69 @@
  	"$schema": "http://api.contactlab.it/hub#",
  	"additionalProperties": false,
  	"properties": {
+ 		"salesAssistant": {
+ 			"type": [
+ 				"object",
+ 				"null"
+ 			],
+ 			"additionalProperties": false,
+ 			"properties": {
+ 				"id": {
+ 					"description": "The identifier of the sales assistant",
+ 					"type": "string"
+ 				},
+ 				"firstName": {
+ 					"description": "The first name of the sales assistant",
+ 					"type": [
+ 						"string",
+ 						"null"
+ 					]
+ 				},
+ 				"lastName": {
+ 					"description": "The last name of the sales assistant",
+ 					"type": [
+ 						"string",
+ 						"null"
+ 					]
+ 				},
+ 				"contacts": {
+ 					"description": "The contact information for the sales assistant",
+ 					"type": [
+ 						"object",
+ 						"null"
+ 					],
+ 					"additionalProperties": false,
+ 					"properties": {
+ 						"email": {
+ 							"description": "The email address of the sales assistant",
+ 							"type": [
+ 								"string",
+ 								"null"
+ 							],
+ 							"format": "email"
+ 						},
+ 						"mobilePhone": {
+ 							"description": "The mobile phone number of the sales assistant",
+ 							"type": [
+ 								"string",
+ 								"null"
+ 							]
+ 						},
+ 						"phone": {
+ 							"description": "The phone number of the sales assistant",
+ 							"type": [
+ 								"string",
+ 								"null"
+ 							]
+ 						}
+ 					}
+ 				}
+ 			},
+ 			"required": [
+ 				"id"
+ 			]
+ 		},
+
  		"client": {
  			"type": "object",
  			"properties": {
