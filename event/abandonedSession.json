@@ -1,0 +1,114 @@
+{
+	"$schema": "http://api.contactlab.it/hub#",
+	"type": "object",
+	"description": "Customer that left current session",
+	"additionalProperties": false,
+	"properties": {
+		"abandonedSessionUrl": {
+			"type": "string",
+			"description": "The URL to recover the abandoned session",
+			"format": "uri"
+		},
+		"products": {
+			"type": "array",
+			"description": "Details of transaction",
+			"items": {
+				"type": "object",
+				"additionalProperties": false,
+				"properties": {
+					"price": {
+						"type": "number",
+						"description": "Price of the product"
+					},
+					"name": {
+						"type": "string",
+						"description": "Name of the product"
+					},
+					"sku": {
+						"type": "string",
+						"description": "Sku of the product"
+					},
+					"vendor": {
+						"type": [
+							"string",
+							"null"
+						],
+						"description": "Vendor of the product"
+					},
+					"classifications": {
+						"type": "array",
+						"description": "The list of classifications of the product",
+						"items": {
+							"type": "object",
+							"additionalProperties": false,
+							"properties": {
+								"key": {
+									"type": "string",
+									"description": "The key of the classification"
+								},
+								"value": {
+									"type": "string",
+									"description": "The value of the classification"
+								}
+							},
+							"required": [
+								"key",
+								"value"
+							]
+						}
+					},
+					"category": {
+						"type": "array",
+						"description": "Categories list of the product",
+						"items": {
+							"type": "string"
+						}
+					},
+					"shortDescription": {
+						"type": "string",
+						"description": "Short description of the product"
+					},
+					"linkUrl": {
+						"type": "string",
+						"description": "The online catalogue of the product",
+						"format": "uri"
+					},
+					"imageUrl": {
+						"type": "string",
+						"description": "The image of online catalogue of the product",
+						"format": "uri"
+					},
+					"id": {
+						"type": "string",
+						"description": "Database id of the product"
+					},
+					"weight": {
+						"type": [
+							"number",
+							"null"
+						],
+						"description": "The weight of the product"
+					},
+					"itemQuantity": {
+						"type": [
+							"number",
+							"null"
+						],
+						"description": "The items quantity of the product"
+					},
+					"unitOfMeasure": {
+						"type": [
+							"string",
+							"null"
+						],
+						"description": "Unit of measure"
+					}
+				}
+			}
+		},
+		"extraProperties": {
+			"type": "object",
+			"description": "Extra pieces of information you can tie to events you track"
+		}
+	}
+}
