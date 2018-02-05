@@ -58,6 +58,77 @@
 					}
 				}
 			}
+		},
+		"user": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"description": "The identifier of the user",
+					"type": "string"
+				},
+				"externalId": {
+					"description": "The external identifier of the user",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				"username": {
+					"description": "The username of the user",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				"firstName": {
+					"description": "The first name of the user",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				"lastName": {
+					"description": "The last name of the user",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				"contacts": {
+					"description": "The contact information for the user",
+					"type": [
+						"object",
+						"null"
+					],
+					"properties": {
+						"email": {
+							"description": "The email address of the user",
+							"type": [
+								"string",
+								"null"
+							],
+							"format": "email"
+						},
+						"mobilePhone": {
+							"description": "The mobile phone number of the user",
+							"type": [
+								"string",
+								"null"
+							]
+						},
+						"phone": {
+							"description": "The phone number of the user",
+							"type": [
+								"string",
+								"null"
+							]
+						}
+					}
+				}
+			},
+			"required": [
+				"id"
+			]
 		}
 	}
 }
