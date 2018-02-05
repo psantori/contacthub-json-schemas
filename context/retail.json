@@ -66,7 +66,6 @@
  				"id"
  			]
  		},
-
  		"client": {
  			"type": "object",
  			"properties": {
