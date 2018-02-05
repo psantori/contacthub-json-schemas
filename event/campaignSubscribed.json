@@ -16,11 +16,21 @@
 			"type": "string",
 			"description": "Name used to identify a list"
 		},
-		"channel": {
-			"type": "string",
-			"description": "The campaign medium",
-			"enum": ["SMS", "EMAIL", "PUSH", "FAX"]
-		},
+                "channel": {
+                    "type": "string",
+                    "description": "The campaign medium",
+                    "enum": [
+                        "SMS",
+                        "EMAIL",
+                        "PUSH",
+                        "FAX",
+                        "IM"
+                    ]
+                },
+                "channelType": {
+                    "type": "string",
+                    "description": "The type of a channel"
+                },
 		"extraProperties": {
 			"type": "object",
 			"description": "Extra pieces of information you can tie to events you track"
