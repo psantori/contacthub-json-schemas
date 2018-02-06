@@ -4,55 +4,51 @@
 	"description": "Customer was sent the optin request",
 	"additionalProperties": false,
 	"properties": {
-		"type": "object",
-		"additionalProperties": false,
-		"properties": {
-			"listId": {
-				"type": "string",
-				"description": "Id used to identify a list"
-			},
-			"listName": {
-				"type": "string",
-				"description": "Name used to identify a list"
-			},
-			"subscriberId": {
-				"type": "string",
-				"description": "An ID used to identify the subscriber"
-			},
-			"channel": {
-				"type": "string",
-				"description": "The campaign medium",
-				"enum": [
-					"SMS",
-					"EMAIL",
-					"PUSH",
-					"FAX",
-					"IM"
-				]
-			},
-			"channelType": {
-				"type": "string",
-				"description": "The type of campaign medium"
-			},
-			"invitationChannel": {
-				"type": "string",
-				"description": "The invitation medium",
-				"enum": [
-					"SMS",
-					"EMAIL",
-					"PUSH",
-					"FAX",
-					"IM"
-				]
-			},
-			"invitationChannelType": {
-				"type": "string",
-				"description": "The type of invitation medium"
-			},
-			"extraProperties": {
-				"type": "object",
-				"description": "Extra pieces of information you can tie to events you track"
-			}
+		"listId": {
+			"type": "string",
+			"description": "Id used to identify a list"
+		},
+		"listName": {
+			"type": "string",
+			"description": "Name used to identify a list"
+		},
+		"subscriberId": {
+			"type": "string",
+			"description": "An ID used to identify the subscriber"
+		},
+		"channel": {
+			"type": "string",
+			"description": "The campaign medium",
+			"enum": [
+				"SMS",
+				"EMAIL",
+				"PUSH",
+				"FAX",
+				"IM"
+			]
+		},
+		"channelType": {
+			"type": "string",
+			"description": "The type of campaign medium"
+		},
+		"invitationChannel": {
+			"type": "string",
+			"description": "The invitation medium",
+			"enum": [
+				"SMS",
+				"EMAIL",
+				"PUSH",
+				"FAX",
+				"IM"
+			]
+		},
+		"invitationChannelType": {
+			"type": "string",
+			"description": "The type of invitation medium"
+		},
+		"extraProperties": {
+			"type": "object",
+			"description": "Extra pieces of information you can tie to events you track"
 		}
 	}
-}	
+}
