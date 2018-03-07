@@ -1,0 +1,20 @@
+{
+	"$schema": "http://api.contactlab.it/hub#",
+	"type": "object",
+	"description": "The customer's tags data structure included in Contacthub",
+	"properties": {
+		"auto": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
+		"manual": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		}
+	},
+	"additionalProperties": false
+}
