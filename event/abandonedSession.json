@@ -1,7 +1,7 @@
 {
 	"$schema": "http://api.contactlab.it/hub#",
 	"type": "object",
-	"description": "Customer that left current session",
+	"description": "Customer view products but without buy and add in cart left the session",
 	"additionalProperties": false,
 	"properties": {
 		"abandonedSessionUrl": {
