@@ -41,6 +41,10 @@
           "additionalProperties": false,
           "properties": {
             "telephonic": {
+              "type": [
+                "object",
+                "null"
+              ],
               "oneOf": [
                 {
                   "type": "object",
