@@ -16,13 +16,15 @@
 						"string",
 						"null"
 					],
-					"format": "date-time"
+					"format": "date-time",
+					"description": "Version of disclaimer"
 				},
 				"version": {
 					"type": [
 						"string",
 						"null"
-					]
+					],
+					"description": "The date of acceptance of the disclaimer"
 				}
 			}
 		},
@@ -31,6 +33,7 @@
 				"object",
 				"null"
 			],
+			"description": "The part of marketing's consents",
 			"additionalProperties": false,
 			"properties": {
 				"traditional": {
@@ -38,6 +41,7 @@
 						"object",
 						"null"
 					],
+					"description": "Marketing traditional",
 					"additionalProperties": false,
 					"properties": {
 						"telephonic": {
@@ -45,6 +49,7 @@
 								"object",
 								"null"
 							],
+							"description": "Marketing traditional telephonic",
 							"additionalProperties": false,
 							"properties": {
 								"status": {
@@ -72,6 +77,7 @@
 								"object",
 								"null"
 							],
+							"description": "Marketing traditional papery",
 							"additionalProperties": false,
 							"properties": {
 								"status": {
@@ -101,6 +107,7 @@
 						"object",
 						"null"
 					],
+					"description": "Marketing automatic",
 					"additionalProperties": false,
 					"properties": {
 						"sms": {
@@ -108,6 +115,7 @@
 								"object",
 								"null"
 							],
+							"description": "Marketing automatic sms",
 							"additionalProperties": false,
 							"properties": {
 								"status": {
@@ -135,6 +143,7 @@
 								"object",
 								"null"
 							],
+							"description": "Marketing automatic email",
 							"additionalProperties": false,
 							"properties": {
 								"status": {
@@ -162,6 +171,7 @@
 								"object",
 								"null"
 							],
+							"description": "Marketing automatic push",
 							"additionalProperties": false,
 							"properties": {
 								"status": {
@@ -189,6 +199,7 @@
 								"object",
 								"null"
 							],
+							"description": "Marketing automatic im",
 							"additionalProperties": false,
 							"properties": {
 								"status": {
@@ -216,6 +227,7 @@
 								"object",
 								"null"
 							],
+							"description": "Marketing automatic telephonic",
 							"additionalProperties": false,
 							"properties": {
 								"status": {
@@ -247,61 +259,64 @@
 				"object",
 				"null"
 			],
+			"description": "The part of profiling's consents",
 			"additionalProperties": false,
 			"properties": {
 				"classic": {
-					"type": [
-						"object",
-						"null"
-					],
-					"additionalProperties": false,
-					"properties": {
-						"status": {
 							"type": [
-								"boolean",
+								"object",
 								"null"
-							]
-						},
-						"limitation": {
-							"type": [
-								"boolean",
-								"null"
-							]
-						},
-						"objection": {
-							"type": [
-								"boolean",
-								"null"
-							]
-						}
-					}
+							],
+							"description": "Profiling classic",
+							"additionalProperties": false,
+							"properties": {
+								"status": {
+									"type": [
+										"boolean",
+										"null"
+									]
+								},
+								"limitation": {
+									"type": [
+										"boolean",
+										"null"
+									]
+								},
+								"objection": {
+									"type": [
+										"boolean",
+										"null"
+									]
+								}
+							}
 				},
 				"online": {
-					"type": [
-						"object",
-						"null"
-					],
-					"additionalProperties": false,
-					"properties": {
-						"status": {
 							"type": [
-								"boolean",
+								"object",
 								"null"
-							]
-						},
-						"limitation": {
-							"type": [
-								"boolean",
-								"null"
-							]
-						},
-						"objection": {
-							"type": [
-								"boolean",
-								"null"
-							]
-						}
-					}
+							],
+							"description": "Profiling online",
+							"additionalProperties": false,
+							"properties": {
+								"status": {
+									"type": [
+										"boolean",
+										"null"
+									]
+								},
+								"limitation": {
+									"type": [
+										"boolean",
+										"null"
+									]
+								},
+								"objection": {
+									"type": [
+										"boolean",
+										"null"
+									]
+								}
+							}
 				}
 			}
 		},
@@ -310,61 +325,64 @@
 				"object",
 				"null"
 			],
+			"description": "The part of softspam's consents",
 			"additionalProperties": false,
 			"properties": {
 				"email": {
-					"type": [
-						"object",
-						"null"
-					],
-					"additionalProperties": false,
-					"properties": {
-						"status": {
 							"type": [
-								"boolean",
+								"object",
 								"null"
-							]
-						},
-						"limitation": {
-							"type": [
-								"boolean",
-								"null"
-							]
-						},
-						"objection": {
-							"type": [
-								"boolean",
-								"null"
-							]
-						}
-					}
+							],
+							"description": "Softspam email",
+							"additionalProperties": false,
+							"properties": {
+								"status": {
+									"type": [
+										"boolean",
+										"null"
+									]
+								},
+								"limitation": {
+									"type": [
+										"boolean",
+										"null"
+									]
+								},
+								"objection": {
+									"type": [
+										"boolean",
+										"null"
+									]
+								}
+							}
 				},
 				"papery": {
-					"type": [
-						"object",
-						"null"
-					],
-					"additionalProperties": false,
-					"properties": {
-						"status": {
 							"type": [
-								"boolean",
+								"object",
 								"null"
-							]
-						},
-						"limitation": {
-							"type": [
-								"boolean",
-								"null"
-							]
-						},
-						"objection": {
-							"type": [
-								"boolean",
-								"null"
-							]
-						}
-					}
+							],
+							"description": "Softspam papery",
+							"additionalProperties": false,
+							"properties": {
+								"status": {
+									"type": [
+										"boolean",
+										"null"
+									]
+								},
+								"limitation": {
+									"type": [
+										"boolean",
+										"null"
+									]
+								},
+								"objection": {
+									"type": [
+										"boolean",
+										"null"
+									]
+								}
+							}
 				}
 			}
 		},
@@ -373,61 +391,64 @@
 				"object",
 				"null"
 			],
+			"description": "The part of third party transfer consents",
 			"additionalProperties": false,
 			"properties": {
 				"profiling": {
-					"type": [
-						"object",
-						"null"
-					],
-					"additionalProperties": false,
-					"properties": {
-						"status": {
 							"type": [
-								"boolean",
+								"object",
 								"null"
-							]
-						},
-						"limitation": {
-							"type": [
-								"boolean",
-								"null"
-							]
-						},
-						"objection": {
-							"type": [
-								"boolean",
-								"null"
-							]
-						}
-					}
+							],
+							"description": "Third party transfer profiling",
+							"additionalProperties": false,
+							"properties": {
+								"status": {
+									"type": [
+										"boolean",
+										"null"
+									]
+								},
+								"limitation": {
+									"type": [
+										"boolean",
+										"null"
+									]
+								},
+								"objection": {
+									"type": [
+										"boolean",
+										"null"
+									]
+								}
+							}
 				},
 				"marketing": {
-					"type": [
-						"object",
-						"null"
-					],
-					"additionalProperties": false,
-					"properties": {
-						"status": {
 							"type": [
-								"boolean",
+								"object",
 								"null"
-							]
-						},
-						"limitation": {
-							"type": [
-								"boolean",
-								"null"
-							]
-						},
-						"objection": {
-							"type": [
-								"boolean",
-								"null"
-							]
-						}
-					}
+							],
+							"description": "Third party transfer marketing",
+							"additionalProperties": false,
+							"properties": {
+								"status": {
+									"type": [
+										"boolean",
+										"null"
+									]
+								},
+								"limitation": {
+									"type": [
+										"boolean",
+										"null"
+									]
+								},
+								"objection": {
+									"type": [
+										"boolean",
+										"null"
+									]
+								}
+							}
 				}
 			}
 		}
