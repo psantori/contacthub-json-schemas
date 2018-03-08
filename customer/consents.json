@@ -68,6 +68,12 @@
 							}
 						},
 						"papery": {
+							"type": [
+								"object",
+								"null"
+							],
+					"properties": {
+
 							"oneOf": [{
 									"anyOf": [{
 											"type": "object",
@@ -156,6 +162,7 @@
 									"type": "null"
 								}
 							]
+							}
 						}
 					}
 				},
