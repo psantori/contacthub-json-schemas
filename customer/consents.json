@@ -74,7 +74,10 @@
 							],
 					"properties": {
 
-							"oneOf": [{
+							"oneOf": [
+								{
+								"properties": {
+
 									"anyOf": [{
 											"type": "object",
 											"additionalProperties": false,
@@ -157,6 +160,7 @@
 											}
 										}
 									]
+									}
 								},
 								{
 									"type": "null"
