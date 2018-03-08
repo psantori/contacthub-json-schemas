@@ -1,1254 +1,1228 @@
 {
-	"$schema": "http://api.contactlab.it/hub#",
-	"type": "object",
-	"additionalProperties": false,
-	"description": "The customer's consents data structure included in Contacthub",
-	"properties": {
-		"disclaimer": {
-			"type": [
-				"object",
-				"null"
-			],
-			"additionalProperties": false,
-			"properties": {
-				"date": {
-					"type": [
-						"string",
-						"null"
-					],
-					"format": "date-time"
-				},
-				"version": {
-					"type": [
-						"string",
-						"null"
-					]
-				}
-			}
-		},
-		"marketing": {
-			"type": [
-				"object",
-				"null"
-			],
-			"additionalProperties": false,
-			"properties": {
-				"traditional": {
-					"type": [
-						"object",
-						"null"
-					],
-					"additionalProperties": false,
-					"properties": {
-						"telephonic": {
-							"oneOf": [{
-									"anyOf": [{
-											"type": "object",
-											"additionalProperties": false,
-											"required": [
-												"status"
-											],
-											"properties": {
-												"status": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"limitation": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"objection": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												}
-											}
-										},
-										{
-											"type": "object",
-											"additionalProperties": false,
-											"required": [
-												"limitation"
-											],
-											"properties": {
-												"status": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"limitation": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"objection": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												}
-											}
-										},
-										{
-											"type": "object",
-											"additionalProperties": false,
-											"required": [
-												"objection"
-											],
-											"properties": {
-												"status": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"limitation": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"objection": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												}
-											}
-										}
-									]
-								},
-								{
-									"type": "null"
-								}
-							]
-						},
-						"papery": {
-							"oneOf": [{
-									"anyOf": [{
-											"type": "object",
-											"additionalProperties": false,
-											"required": [
-												"status"
-											],
-											"properties": {
-												"status": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"limitation": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"objection": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												}
-											}
-										},
-										{
-											"type": "object",
-											"additionalProperties": false,
-											"required": [
-												"limitation"
-											],
-											"properties": {
-												"status": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"limitation": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"objection": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												}
-											}
-										},
-										{
-											"type": "object",
-											"additionalProperties": false,
-											"required": [
-												"objection"
-											],
-											"properties": {
-												"status": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"limitation": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"objection": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												}
-											}
-										}
-									]
-								},
-								{
-									"type": "null"
-								}
-							]
-						}
-					}
-				},
-				"automatic": {
-					"type": [
-						"object",
-						"null"
-					],
-					"additionalProperties": false,
-					"properties": {
-						"sms": {
-							"oneOf": [{
-									"anyOf": [{
-											"type": "object",
-											"additionalProperties": false,
-											"required": [
-												"status"
-											],
-											"properties": {
-												"status": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"limitation": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"objection": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												}
-											}
-										},
-										{
-											"type": "object",
-											"additionalProperties": false,
-											"required": [
-												"limitation"
-											],
-											"properties": {
-												"status": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"limitation": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"objection": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												}
-											}
-										},
-										{
-											"type": "object",
-											"additionalProperties": false,
-											"required": [
-												"objection"
-											],
-											"properties": {
-												"status": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"limitation": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"objection": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												}
-											}
-										}
-									]
-								},
-								{
-									"type": "null"
-								}
-							]
-						},
-						"email": {
-							"oneOf": [{
-									"anyOf": [{
-											"type": "object",
-											"additionalProperties": false,
-											"required": [
-												"status"
-											],
-											"properties": {
-												"status": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"limitation": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"objection": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												}
-											}
-										},
-										{
-											"type": "object",
-											"additionalProperties": false,
-											"required": [
-												"limitation"
-											],
-											"properties": {
-												"status": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"limitation": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"objection": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												}
-											}
-										},
-										{
-											"type": "object",
-											"additionalProperties": false,
-											"required": [
-												"objection"
-											],
-											"properties": {
-												"status": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"limitation": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"objection": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												}
-											}
-										}
-									]
-								},
-								{
-									"type": "null"
-								}
-							]
-						},
-						"push": {
-							"oneOf": [{
-									"anyOf": [{
-											"type": "object",
-											"additionalProperties": false,
-											"required": [
-												"status"
-											],
-											"properties": {
-												"status": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"limitation": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"objection": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												}
-											}
-										},
-										{
-											"type": "object",
-											"additionalProperties": false,
-											"required": [
-												"limitation"
-											],
-											"properties": {
-												"status": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"limitation": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"objection": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												}
-											}
-										},
-										{
-											"type": "object",
-											"additionalProperties": false,
-											"required": [
-												"objection"
-											],
-											"properties": {
-												"status": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"limitation": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"objection": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												}
-											}
-										}
-									]
-								},
-								{
-									"type": "null"
-								}
-							]
-						},
-						"im": {
-							"oneOf": [{
-									"anyOf": [{
-											"type": "object",
-											"additionalProperties": false,
-											"required": [
-												"status"
-											],
-											"properties": {
-												"status": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"limitation": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"objection": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												}
-											}
-										},
-										{
-											"type": "object",
-											"additionalProperties": false,
-											"required": [
-												"limitation"
-											],
-											"properties": {
-												"status": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"limitation": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"objection": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												}
-											}
-										},
-										{
-											"type": "object",
-											"additionalProperties": false,
-											"required": [
-												"objection"
-											],
-											"properties": {
-												"status": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"limitation": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"objection": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												}
-											}
-										}
-									]
-								},
-								{
-									"type": "null"
-								}
-							]
-						},
-						"telephonic": {
-							"oneOf": [{
-									"anyOf": [{
-											"type": "object",
-											"additionalProperties": false,
-											"required": [
-												"status"
-											],
-											"properties": {
-												"status": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"limitation": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"objection": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												}
-											}
-										},
-										{
-											"type": "object",
-											"additionalProperties": false,
-											"required": [
-												"limitation"
-											],
-											"properties": {
-												"status": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"limitation": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"objection": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												}
-											}
-										},
-										{
-											"type": "object",
-											"additionalProperties": false,
-											"required": [
-												"objection"
-											],
-											"properties": {
-												"status": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"limitation": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												},
-												"objection": {
-													"type": [
-														"boolean",
-														"null"
-													]
-												}
-											}
-										}
-									]
-								},
-								{
-									"type": "null"
-								}
-							]
-						}
-					}
-				}
-			}
-		},
-		"profiling": {
-			"type": [
-				"object",
-				"null"
-			],
-			"additionalProperties": false,
-			"properties": {
-				"classic": {
-					"oneOf": [{
-							"anyOf": [{
-									"type": "object",
-									"additionalProperties": false,
-									"required": [
-										"status"
-									],
-									"properties": {
-										"status": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"limitation": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"objection": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										}
-									}
-								},
-								{
-									"type": "object",
-									"additionalProperties": false,
-									"required": [
-										"limitation"
-									],
-									"properties": {
-										"status": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"limitation": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"objection": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										}
-									}
-								},
-								{
-									"type": "object",
-									"additionalProperties": false,
-									"required": [
-										"objection"
-									],
-									"properties": {
-										"status": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"limitation": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"objection": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										}
-									}
-								}
-							]
-						},
-						{
-							"type": "null"
-						}
-					]
-				},
-				"online": {
-					"oneOf": [{
-							"anyOf": [{
-									"type": "object",
-									"additionalProperties": false,
-									"required": [
-										"status"
-									],
-									"properties": {
-										"status": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"limitation": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"objection": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										}
-									}
-								},
-								{
-									"type": "object",
-									"additionalProperties": false,
-									"required": [
-										"limitation"
-									],
-									"properties": {
-										"status": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"limitation": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"objection": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										}
-									}
-								},
-								{
-									"type": "object",
-									"additionalProperties": false,
-									"required": [
-										"objection"
-									],
-									"properties": {
-										"status": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"limitation": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"objection": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										}
-									}
-								}
-							]
-						},
-						{
-							"type": "null"
-						}
-					]
-				}
-			}
-		},
-		"softSpam": {
-			"type": [
-				"object",
-				"null"
-			],
-			"additionalProperties": false,
-			"properties": {
-				"email": {
-					"oneOf": [{
-							"anyOf": [{
-									"type": "object",
-									"additionalProperties": false,
-									"required": [
-										"status"
-									],
-									"properties": {
-										"status": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"limitation": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"objection": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										}
-									}
-								},
-								{
-									"type": "object",
-									"additionalProperties": false,
-									"required": [
-										"limitation"
-									],
-									"properties": {
-										"status": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"limitation": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"objection": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										}
-									}
-								},
-								{
-									"type": "object",
-									"additionalProperties": false,
-									"required": [
-										"objection"
-									],
-									"properties": {
-										"status": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"limitation": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"objection": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										}
-									}
-								}
-							]
-						},
-						{
-							"type": "null"
-						}
-					]
-				},
-				"papery": {
-					"oneOf": [{
-							"anyOf": [{
-									"type": "object",
-									"additionalProperties": false,
-									"required": [
-										"status"
-									],
-									"properties": {
-										"status": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"limitation": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"objection": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										}
-									}
-								},
-								{
-									"type": "object",
-									"additionalProperties": false,
-									"required": [
-										"limitation"
-									],
-									"properties": {
-										"status": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"limitation": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"objection": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										}
-									}
-								},
-								{
-									"type": "object",
-									"additionalProperties": false,
-									"required": [
-										"objection"
-									],
-									"properties": {
-										"status": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"limitation": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"objection": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										}
-									}
-								}
-							]
-						},
-						{
-							"type": "null"
-						}
-					]
-				}
-			}
-		},
-		"thirdPartyTransfer": {
-			"type": [
-				"object",
-				"null"
-			],
-			"additionalProperties": false,
-			"properties": {
-				"profiling": {
-					"oneOf": [{
-							"anyOf": [{
-									"type": "object",
-									"additionalProperties": false,
-									"required": [
-										"status"
-									],
-									"properties": {
-										"status": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"limitation": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"objection": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										}
-									}
-								},
-								{
-									"type": "object",
-									"additionalProperties": false,
-									"required": [
-										"limitation"
-									],
-									"properties": {
-										"status": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"limitation": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"objection": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										}
-									}
-								},
-								{
-									"type": "object",
-									"additionalProperties": false,
-									"required": [
-										"objection"
-									],
-									"properties": {
-										"status": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"limitation": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"objection": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										}
-									}
-								}
-							]
-						},
-						{
-							"type": "null"
-						}
-					]
-				},
-				"marketing": {
-					"oneOf": [{
-							"anyOf": [{
-									"type": "object",
-									"additionalProperties": false,
-									"required": [
-										"status"
-									],
-									"properties": {
-										"status": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"limitation": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"objection": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										}
-									}
-								},
-								{
-									"type": "object",
-									"additionalProperties": false,
-									"required": [
-										"limitation"
-									],
-									"properties": {
-										"status": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"limitation": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"objection": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										}
-									}
-								},
-								{
-									"type": "object",
-									"additionalProperties": false,
-									"required": [
-										"objection"
-									],
-									"properties": {
-										"status": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"limitation": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										},
-										"objection": {
-											"type": [
-												"boolean",
-												"null"
-											]
-										}
-									}
-								}
-							]
-						},
-						{
-							"type": "null"
-						}
-					]
-				}
-			}
-		}
-	}
+  "$schema": "http://api.contactlab.it/hub#",
+  "type": "object",
+  "additionalProperties": false,
+  "description": "The customer's consents data structure included in Contacthub",
+  "properties": {
+    "disclaimer": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "marketing": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "traditional": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "telephonic": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "status"
+                  ],
+                  "properties": {
+                    "status": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "limitation": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "objection": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "limitation"
+                  ],
+                  "properties": {
+                    "status": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "limitation": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "objection": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "objection"
+                  ],
+                  "properties": {
+                    "status": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "limitation": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "objection": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "papery": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "status"
+                  ],
+                  "properties": {
+                    "status": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "limitation": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "objection": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "limitation"
+                  ],
+                  "properties": {
+                    "status": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "limitation": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "objection": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "objection"
+                  ],
+                  "properties": {
+                    "status": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "limitation": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "objection": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "automatic": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "sms": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "status"
+                  ],
+                  "properties": {
+                    "status": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "limitation": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "objection": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "limitation"
+                  ],
+                  "properties": {
+                    "status": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "limitation": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "objection": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "objection"
+                  ],
+                  "properties": {
+                    "status": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "limitation": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "objection": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "email": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "status"
+                  ],
+                  "properties": {
+                    "status": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "limitation": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "objection": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "limitation"
+                  ],
+                  "properties": {
+                    "status": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "limitation": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "objection": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "objection"
+                  ],
+                  "properties": {
+                    "status": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "limitation": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "objection": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "push": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "status"
+                  ],
+                  "properties": {
+                    "status": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "limitation": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "objection": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "limitation"
+                  ],
+                  "properties": {
+                    "status": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "limitation": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "objection": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "objection"
+                  ],
+                  "properties": {
+                    "status": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "limitation": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "objection": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "im": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "status"
+                  ],
+                  "properties": {
+                    "status": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "limitation": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "objection": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "limitation"
+                  ],
+                  "properties": {
+                    "status": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "limitation": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "objection": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "objection"
+                  ],
+                  "properties": {
+                    "status": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "limitation": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "objection": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "telephonic": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "status"
+                  ],
+                  "properties": {
+                    "status": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "limitation": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "objection": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "limitation"
+                  ],
+                  "properties": {
+                    "status": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "limitation": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "objection": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "objection"
+                  ],
+                  "properties": {
+                    "status": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "limitation": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "objection": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "profiling": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "classic": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status"
+              ],
+              "properties": {
+                "status": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "limitation": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "objection": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "limitation"
+              ],
+              "properties": {
+                "status": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "limitation": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "objection": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "objection"
+              ],
+              "properties": {
+                "status": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "limitation": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "objection": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "online": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status"
+              ],
+              "properties": {
+                "status": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "limitation": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "objection": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "limitation"
+              ],
+              "properties": {
+                "status": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "limitation": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "objection": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "objection"
+              ],
+              "properties": {
+                "status": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "limitation": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "objection": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "softSpam": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "email": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status"
+              ],
+              "properties": {
+                "status": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "limitation": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "objection": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "limitation"
+              ],
+              "properties": {
+                "status": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "limitation": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "objection": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "objection"
+              ],
+              "properties": {
+                "status": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "limitation": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "objection": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "papery": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status"
+              ],
+              "properties": {
+                "status": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "limitation": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "objection": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "limitation"
+              ],
+              "properties": {
+                "status": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "limitation": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "objection": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "objection"
+              ],
+              "properties": {
+                "status": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "limitation": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "objection": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "thirdPartyTransfer": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "profiling": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status"
+              ],
+              "properties": {
+                "status": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "limitation": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "objection": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "limitation"
+              ],
+              "properties": {
+                "status": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "limitation": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "objection": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "objection"
+              ],
+              "properties": {
+                "status": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "limitation": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "objection": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "marketing": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status"
+              ],
+              "properties": {
+                "status": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "limitation": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "objection": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "limitation"
+              ],
+              "properties": {
+                "status": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "limitation": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "objection": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "objection"
+              ],
+              "properties": {
+                "status": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "limitation": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "objection": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    }
+  }
 }
