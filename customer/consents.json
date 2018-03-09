@@ -56,19 +56,22 @@
 									"type": [
 										"boolean",
 										"null"
-									]
+									],
+									"description": "Status of consent"
 								},
 								"limitation": {
 									"type": [
 										"boolean",
 										"null"
-									]
+									],
+									"description": "Status of consent limitation"
 								},
 								"objection": {
 									"type": [
 										"boolean",
 										"null"
-									]
+									],
+									"description": "Status of consent objection"
 								}
 							}
 						},
@@ -84,19 +87,22 @@
 									"type": [
 										"boolean",
 										"null"
-									]
+									],
+									"description": "Status of consent"
 								},
 								"limitation": {
 									"type": [
 										"boolean",
 										"null"
-									]
+									],
+									"description": "Status of consent limitation"
 								},
 								"objection": {
 									"type": [
 										"boolean",
 										"null"
-									]
+									],
+									"description": "Status of consent objection"
 								}
 							}
 						}
@@ -122,19 +128,22 @@
 									"type": [
 										"boolean",
 										"null"
-									]
+									],
+									"description": "Status of consent"
 								},
 								"limitation": {
 									"type": [
 										"boolean",
 										"null"
-									]
+									],
+									"description": "Status of consent limitation"
 								},
 								"objection": {
 									"type": [
 										"boolean",
 										"null"
-									]
+									],
+									"description": "Status of consent objection"
 								}
 							}
 						},
@@ -150,19 +159,22 @@
 									"type": [
 										"boolean",
 										"null"
-									]
+									],
+									"description": "Status of consent"
 								},
 								"limitation": {
 									"type": [
 										"boolean",
 										"null"
-									]
+									],
+									"description": "Status of consent limitation"
 								},
 								"objection": {
 									"type": [
 										"boolean",
 										"null"
-									]
+									],
+									"description": "Status of consent objection"
 								}
 							}
 						},
@@ -178,19 +190,22 @@
 									"type": [
 										"boolean",
 										"null"
-									]
+									],
+									"description": "Status of consent"
 								},
 								"limitation": {
 									"type": [
 										"boolean",
 										"null"
-									]
+									],
+									"description": "Status of consent limitation"
 								},
 								"objection": {
 									"type": [
 										"boolean",
 										"null"
-									]
+									],
+									"description": "Status of consent objection"
 								}
 							}
 						},
@@ -206,19 +221,22 @@
 									"type": [
 										"boolean",
 										"null"
-									]
+									],
+									"description": "Status of consent"
 								},
 								"limitation": {
 									"type": [
 										"boolean",
 										"null"
-									]
+									],
+									"description": "Status of consent limitation"
 								},
 								"objection": {
 									"type": [
 										"boolean",
 										"null"
-									]
+									],
+									"description": "Status of consent objection"
 								}
 							}
 						},
@@ -234,19 +252,22 @@
 									"type": [
 										"boolean",
 										"null"
-									]
+									],
+									"description": "Status of consent"
 								},
 								"limitation": {
 									"type": [
 										"boolean",
 										"null"
-									]
+									],
+									"description": "Status of consent limitation"
 								},
 								"objection": {
 									"type": [
 										"boolean",
 										"null"
-									]
+									],
+									"description": "Status of consent objection"
 								}
 							}
 						}
@@ -263,60 +284,66 @@
 			"additionalProperties": false,
 			"properties": {
 				"classic": {
+					"type": [
+						"object",
+						"null"
+					],
+					"description": "Consent for classic profiling",
+					"additionalProperties": false,
+					"properties": {
+						"status": {
 							"type": [
-								"object",
+								"boolean",
 								"null"
 							],
-							"description": "Consent for classic profiling",
-							"additionalProperties": false,
-							"properties": {
-								"status": {
-									"type": [
-										"boolean",
-										"null"
-									]
-								},
-								"limitation": {
-									"type": [
-										"boolean",
-										"null"
-									]
-								},
-								"objection": {
-									"type": [
-										"boolean",
-										"null"
-									]
-								}
-							}
+							"description": "Status of consent"
+						},
+						"limitation": {
+							"type": [
+								"boolean",
+								"null"
+							],
+							"description": "Status of consent limitation"
+						},
+						"objection": {
+							"type": [
+								"boolean",
+								"null"
+							],
+							"description": "Status of consent objection"
+						}
+					}
 				},
 				"online": {
+					"type": [
+						"object",
+						"null"
+					],
+					"description": "Consent for online profiling",
+					"additionalProperties": false,
+					"properties": {
+						"status": {
 							"type": [
-								"object",
+								"boolean",
 								"null"
 							],
-							"description": "Consent for online profiling",
-							"additionalProperties": false,
-							"properties": {
-								"status": {
-									"type": [
-										"boolean",
-										"null"
-									]
-								},
-								"limitation": {
-									"type": [
-										"boolean",
-										"null"
-									]
-								},
-								"objection": {
-									"type": [
-										"boolean",
-										"null"
-									]
-								}
-							}
+							"description": "Status of consent"
+						},
+						"limitation": {
+							"type": [
+								"boolean",
+								"null"
+							],
+							"description": "Status of consent limitation"
+						},
+						"objection": {
+							"type": [
+								"boolean",
+								"null"
+							],
+							"description": "Status of consent objection"
+						}
+					}
 				}
 			}
 		},
@@ -329,60 +356,66 @@
 			"additionalProperties": false,
 			"properties": {
 				"email": {
+					"type": [
+						"object",
+						"null"
+					],
+					"description": "Consent for e-mail softspam",
+					"additionalProperties": false,
+					"properties": {
+						"status": {
 							"type": [
-								"object",
+								"boolean",
 								"null"
 							],
-							"description": "Consent for e-mail softspam",
-							"additionalProperties": false,
-							"properties": {
-								"status": {
-									"type": [
-										"boolean",
-										"null"
-									]
-								},
-								"limitation": {
-									"type": [
-										"boolean",
-										"null"
-									]
-								},
-								"objection": {
-									"type": [
-										"boolean",
-										"null"
-									]
-								}
-							}
+							"description": "Status of consent"
+						},
+						"limitation": {
+							"type": [
+								"boolean",
+								"null"
+							],
+							"description": "Status of consent limitation"
+						},
+						"objection": {
+							"type": [
+								"boolean",
+								"null"
+							],
+							"description": "Status of consent objection"
+						}
+					}
 				},
 				"papery": {
+					"type": [
+						"object",
+						"null"
+					],
+					"description": "Consent for papery softspam",
+					"additionalProperties": false,
+					"properties": {
+						"status": {
 							"type": [
-								"object",
+								"boolean",
 								"null"
 							],
-							"description": "Consent for papery softspam",
-							"additionalProperties": false,
-							"properties": {
-								"status": {
-									"type": [
-										"boolean",
-										"null"
-									]
-								},
-								"limitation": {
-									"type": [
-										"boolean",
-										"null"
-									]
-								},
-								"objection": {
-									"type": [
-										"boolean",
-										"null"
-									]
-								}
-							}
+							"description": "Status of consent"
+						},
+						"limitation": {
+							"type": [
+								"boolean",
+								"null"
+							],
+							"description": "Status of consent limitation"
+						},
+						"objection": {
+							"type": [
+								"boolean",
+								"null"
+							],
+							"description": "Status of consent objection"
+						}
+					}
 				}
 			}
 		},
@@ -395,60 +428,66 @@
 			"additionalProperties": false,
 			"properties": {
 				"profiling": {
+					"type": [
+						"object",
+						"null"
+					],
+					"description": "Consent transfer to third parties for profiling",
+					"additionalProperties": false,
+					"properties": {
+						"status": {
 							"type": [
-								"object",
+								"boolean",
 								"null"
 							],
-							"description": "Consent transfer to third parties for profiling",
-							"additionalProperties": false,
-							"properties": {
-								"status": {
-									"type": [
-										"boolean",
-										"null"
-									]
-								},
-								"limitation": {
-									"type": [
-										"boolean",
-										"null"
-									]
-								},
-								"objection": {
-									"type": [
-										"boolean",
-										"null"
-									]
-								}
-							}
+							"description": "Status of consent"
+						},
+						"limitation": {
+							"type": [
+								"boolean",
+								"null"
+							],
+							"description": "Status of consent limitation"
+						},
+						"objection": {
+							"type": [
+								"boolean",
+								"null"
+							],
+							"description": "Status of consent objection"
+						}
+					}
 				},
 				"marketing": {
+					"type": [
+						"object",
+						"null"
+					],
+					"description": "Consent transfer to third parties for marketing",
+					"additionalProperties": false,
+					"properties": {
+						"status": {
 							"type": [
-								"object",
+								"boolean",
 								"null"
 							],
-							"description": "Consent transfer to third parties for marketing",
-							"additionalProperties": false,
-							"properties": {
-								"status": {
-									"type": [
-										"boolean",
-										"null"
-									]
-								},
-								"limitation": {
-									"type": [
-										"boolean",
-										"null"
-									]
-								},
-								"objection": {
-									"type": [
-										"boolean",
-										"null"
-									]
-								}
-							}
+							"description": "Status of consent"
+						},
+						"limitation": {
+							"type": [
+								"boolean",
+								"null"
+							],
+							"description": "Status of consent limitation"
+						},
+						"objection": {
+							"type": [
+								"boolean",
+								"null"
+							],
+							"description": "Status of consent objection"
+						}
+					}
 				}
 			}
 		}
