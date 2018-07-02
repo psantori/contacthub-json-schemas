@@ -2,36 +2,32 @@
 	"$schema": "http://api.contactlab.it/hub#",
 	"type": "object",
 	"description": "The customer lost a reward",
-	"additionalProperties": false,
-        "properties": {
-            "type": "object",
-            "properties": {
-                "rewardAmount": {
-                    "type": "number",
-                    "description": "the amount of reward",
-                    "minimum": 0
-                },
-                "rewardDescription": {
-                    "type": "string",
-                    "descritpion": "the description of reward type"
-                },
-                "rewardType": {
-                    "type": "string",
-                    "description": "type of reward"
-                },
-                "rewardTypeId": {
-                    "type": "string",
-                    "description": "the identifier of reward"
-                },
-                "extraProperties": {
-                    "type": "object",
-                    "description": "Extra pieces of information you can tie to events you track"
-                }
-            },
-            "required": [
-                "rewardAmount",
-                "rewardTypeId"
-            ],
-            "additionalProperties": false
-        }
+	"properties": {
+		"rewardAmount": {
+			"type": "number",
+			"description": "the amount of reward",
+			"minimum": 0
+		},
+		"rewardDescription": {
+			"type": "string",
+			"descritpion": "the description of reward type"
+		},
+		"rewardType": {
+			"type": "string",
+			"description": "type of reward"
+		},
+		"rewardTypeId": {
+			"type": "string",
+			"description": "the identifier of reward"
+		},
+		"extraProperties": {
+			"type": "object",
+			"description": "Extra pieces of information you can tie to events you track"
+		}
+	},
+	"required": [
+		"rewardAmount",
+		"rewardTypeId"
+	],
+	"additionalProperties": false
 }
