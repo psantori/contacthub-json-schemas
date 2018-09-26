@@ -1,0 +1,118 @@
+{
+    "$schema": "http://api.contactlab.it/hub#",
+    "type": "object",
+    "additionalProperties": false,
+    "description": "Customer has beed granted a coupon",
+    "properties": {
+        "code": {
+            "type": "string",
+            "description": "Code or Id identifying the coupon"
+        },
+        "redeemDate": {
+            "type": "string",
+            "description": "Last date in which coupon has been used",
+            "format": "date-time"
+        },
+        "startValidityDate": {
+            "type": "string",
+            "date": "First date in which is possible to use the coupon",
+            "format": "date-time"
+        },
+        "redemptionDate": {
+            "type": "string",
+            "description": "Last date in which is possible to use the coupon",
+            "format": "date-time"
+        },
+        "campaignId": {
+            "type": "string",
+            "description": "An ID used to identify the marketing campaign which the coupon is related to"
+        },
+        "campaignName": {
+            "type": "string",
+            "description": "Name of the campaign related to the coupon"
+        },
+        "campaignDescription": {
+            "type": "string",
+            "description": "Description of the campaign related to the coupon"
+        },
+        "status": {
+            "type": "string",
+            "description": "Current status of the coupon"
+        },
+        "type": {
+            "type": "string",
+            "description": "Indication about the type of coupon"
+        },
+        "redeemedAmount": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Amount of the coupon used so far"
+        },
+        "totalAmount": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Total amount available in the coupon"
+        },
+        "remainingAmount": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Amount of the coupon that is still available"
+        },
+        "deliveryChannel": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+            "id": {
+                "type": "string",
+                "description": "An ID used to identify the channel used to delivery the coupon"
+            },
+            "name": {
+                "type": "string",
+                "description": "Name of the channel related to the coupon"
+            },
+            "description": {
+                "type": "string",
+                "description": "Description of the channel related to the coupon"
+            }
+            },
+            "required": [
+                "id"
+            ]
+        },
+        "deliveryMedium": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "An ID used to identify the medium used to delivery the coupon"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the meidum related to the coupon"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Description of the medium related to the coupon"
+                }
+            },
+            "required": [
+            "id"
+            ]
+        },
+        "category": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "extraProperties": {
+            "type": "object",
+            "description": "Extra pieces of information you can tie to events you track"
+        }
+    },
+    "required": [
+        "totalAmount",
+        "startValidityDate"
+    ]
+}
