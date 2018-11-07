@@ -296,7 +296,7 @@
                 </li>
               
                 <li>
-                  <a class="SidebarMenu__Link SidebarMenu__Link   level-2" href="event.eventNotInvited.html">
+                  <a class="SidebarMenu__Link SidebarMenu__Link is-active  level-2" href="event.eventNotInvited.html">
                     <span class="clab-icon icon-file"></span>
                     eventNotInvited
                   </a>
@@ -458,19 +458,160 @@
       <!-- Content -->
       <section class="AppShell__Content hr-h4-margin-swap">
 
-<h1>Schemas</h1>
-
-<p>Here you can find a list and description of the data structures for Customers, Events and Contexts.</p>
-
-<h3>Customers</h3>
-The customer data structure includes a list of the fields related to customer properties, such as first name and last name, gender, date or birth or time zone.
-
-<h3>Events</h3>
-Each event has a different data structure, with its own fields.  For example, the “Completed order” event (a customer purchased goods in the ecommerce store) has fields such as: orderId, storeCode, paymentMethod, amount, and products. If an email campaign is sent to a customer, you will find in the “Campaign sent” event the campaignSubject, campaignId, campaignName and other relevant information.
-
-<h3>Contexts</h3>
-Each context has a different data structure, with its own fields.  For example, the “ECOMMERCE” context has properties such as the store info and the client info.
-	</section>
+<h2 id="eventnotinvited">eventNotInvited</h2>
+<h4 id="typeobject">Type: object</h4>
+<p><em>Customer was not invited to an event</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eventId</td>
+<td><em>string</em></td>
+<td>The idenfier of the event</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>eventName</td>
+<td><em>string</em></td>
+<td>The name of the event</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>eventDate</td>
+<td><em>string</em></td>
+<td>The date-time of the event<br/><strong>format:</strong> <code>date-time</code></td>
+<td><code>"1970-01-01T12:00:00Z"</code></td>
+</tr>
+<tr>
+<td>eventType</td>
+<td><em>string</em></td>
+<td>The type of the event (e.g.: Cocktail, Meeting, etc)</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td><a href="#eventlocation">eventLocation</a></td>
+<td><em>object, null</em></td>
+<td>The location of the event</td>
+<td><code>{...}</code></td>
+</tr>
+<tr>
+<td><a href="#extraproperties">extraProperties</a></td>
+<td><em>object</em></td>
+<td>Extra pieces of information you can tie to events you track</td>
+<td><code>{...}</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="eventlocation">eventLocation</h2>
+<h4 id="typeobjectnull">Type: object,null</h4>
+<p><em>The location of the event</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td><em>string, null</em></td>
+<td>The type of location<br/><strong>one of:</strong> <code>"STORE"</code>, <code>"VENUE"</code>, <code>"STADIUM"</code>, <code>"MUSEUM"</code>, <code>"HEADQUARTERS"</code>, <code>"PALACE"</code>, <code>"CLUB"</code>, <code>"ROOM"</code>, <code>"OTHER"</code></td>
+<td><code>"STORE"</code></td>
+</tr>
+<tr>
+<td>id</td>
+<td><em>string</em></td>
+<td>The idenfier of the location</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>name</td>
+<td><em>string</em></td>
+<td>The name of the location</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td><a href="#address">address</a></td>
+<td><em>object, null</em></td>
+<td>The address details of the location</td>
+<td><code>{...}</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="address">address</h2>
+<h4 id="typeobjectnull-1">Type: object,null</h4>
+<p><em>The address details of the location</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>street</td>
+<td><em>string, null</em></td>
+<td>The location address street component</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>city</td>
+<td><em>string, null</em></td>
+<td>The location address city component</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>country</td>
+<td><em>string, null</em></td>
+<td>The location address country component</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>province</td>
+<td><em>string, null</em></td>
+<td>The location address province component</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>region</td>
+<td><em>string, null</em></td>
+<td>The location address region component</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>zip</td>
+<td><em>string, null</em></td>
+<td>The location address ZIP code component</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>geo</td>
+<td><em>undefined</em></td>
+<td>The geographic coordinate of the location</td>
+<td>``</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="extraproperties">extraProperties</h2>
+<h4 id="typeobject-1">Type: object</h4>
+<p><em>Extra pieces of information you can tie to events you track</em></p>
+<hr />	</section>
 
 
     </div>

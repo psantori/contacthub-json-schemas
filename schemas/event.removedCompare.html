@@ -366,7 +366,7 @@
                 </li>
               
                 <li>
-                  <a class="SidebarMenu__Link SidebarMenu__Link   level-2" href="event.removedCompare.html">
+                  <a class="SidebarMenu__Link SidebarMenu__Link is-active  level-2" href="event.removedCompare.html">
                     <span class="clab-icon icon-file"></span>
                     removedCompare
                   </a>
@@ -458,19 +458,132 @@
       <!-- Content -->
       <section class="AppShell__Content hr-h4-margin-swap">
 
-<h1>Schemas</h1>
-
-<p>Here you can find a list and description of the data structures for Customers, Events and Contexts.</p>
-
-<h3>Customers</h3>
-The customer data structure includes a list of the fields related to customer properties, such as first name and last name, gender, date or birth or time zone.
-
-<h3>Events</h3>
-Each event has a different data structure, with its own fields.  For example, the “Completed order” event (a customer purchased goods in the ecommerce store) has fields such as: orderId, storeCode, paymentMethod, amount, and products. If an email campaign is sent to a customer, you will find in the “Campaign sent” event the campaignSubject, campaignId, campaignName and other relevant information.
-
-<h3>Contexts</h3>
-Each context has a different data structure, with its own fields.  For example, the “ECOMMERCE” context has properties such as the store info and the client info.
-	</section>
+<h2 id="removedcompare">removedCompare</h2>
+<h4 id="typeobject">Type: object</h4>
+<p><em>Customer removed a product to comparator</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>category</td>
+<td><em>array[string]</em></td>
+<td>Categories list of the product</td>
+<td><code>["example", "example"]</code></td>
+</tr>
+<tr>
+<td>shortDescription</td>
+<td><em>string</em></td>
+<td>Short description of the product</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td><a href="#extraproperties">extraProperties</a></td>
+<td><em>object</em></td>
+<td>Extra pieces of information you can tie to events you track</td>
+<td><code>{...}</code></td>
+</tr>
+<tr>
+<td><a href="#classifications">classifications</a></td>
+<td><em>array[object]</em></td>
+<td>The list of classifications of the product</td>
+<td><code>[{...}, {...}]</code></td>
+</tr>
+<tr>
+<td>id</td>
+<td><em>string</em></td>
+<td>Database id of the product</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>sku</td>
+<td><em>string</em></td>
+<td>The sku of the product</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>vendor</td>
+<td><em>string, null</em></td>
+<td>Vendor of the product</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>name</td>
+<td><em>string</em></td>
+<td>Name of the product</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>price</td>
+<td><em>number</em></td>
+<td>Unit price of the product</td>
+<td><code>42.0</code></td>
+</tr>
+<tr>
+<td>imageUrl</td>
+<td><em>string</em></td>
+<td>The image of online catalogue of the product<br/><strong>format:</strong> <code>uri</code></td>
+<td><code>"http://www.example.com/example"</code></td>
+</tr>
+<tr>
+<td>linkUrl</td>
+<td><em>string</em></td>
+<td>The online catalogue of the product<br/><strong>format:</strong> <code>uri</code></td>
+<td><code>"http://www.example.com/example"</code></td>
+</tr>
+<tr>
+<td>weight</td>
+<td><em>number, null</em></td>
+<td>The weight of the product</td>
+<td><code>42.0</code></td>
+</tr>
+<tr>
+<td>itemQuantity</td>
+<td><em>number, null</em></td>
+<td>The items quantity of the product</td>
+<td><code>42.0</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="extraproperties">extraProperties</h2>
+<h4 id="typeobject-1">Type: object</h4>
+<p><em>Extra pieces of information you can tie to events you track</em></p>
+<hr />
+<h2 id="classifications">classifications</h2>
+<h4 id="typeobject-2">Type: object</h4>
+<p><em>&nbsp;</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td><em>string</em></td>
+<td>The key of the classification</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>value</td>
+<td><em>string</em></td>
+<td>The value of the classification</td>
+<td><code>"example"</code></td>
+</tr>
+</tbody>
+</table>
+<hr />	</section>
 
 
     </div>

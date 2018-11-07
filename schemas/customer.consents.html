@@ -107,7 +107,7 @@
                 </li>
               
                 <li>
-                  <a class="SidebarMenu__Link SidebarMenu__Link   level-2" href="customer.consents.html">
+                  <a class="SidebarMenu__Link SidebarMenu__Link is-active  level-2" href="customer.consents.html">
                     <span class="clab-icon icon-file"></span>
                     consents
                   </a>
@@ -154,14 +154,14 @@
                     addedProduct
                   </a>
                 </li>
-              
+
                 <li>
                   <a class="SidebarMenu__Link SidebarMenu__Link   level-2" href="event.addedReward.html">
                     <span class="clab-icon icon-file"></span>
                     addedReward
                   </a>
                 </li>
-              
+				
                 <li>
                   <a class="SidebarMenu__Link SidebarMenu__Link   level-2" href="event.addedWishlist.html">
                     <span class="clab-icon icon-file"></span>
@@ -329,14 +329,14 @@
                     genericPassiveEvent
                   </a>
                 </li>
-              
+               
                 <li>
                   <a class="SidebarMenu__Link SidebarMenu__Link   level-2" href="event.grantedCoupon.html">
                     <span class="clab-icon icon-file"></span>
                     grantedCoupon
                   </a>
                 </li>
-              
+             
                 <li>
                   <a class="SidebarMenu__Link SidebarMenu__Link   level-2" href="event.loggedIn.html">
                     <span class="clab-icon icon-file"></span>
@@ -378,14 +378,12 @@
                     removedProduct
                   </a>
                 </li>
-              
                 <li>
                   <a class="SidebarMenu__Link SidebarMenu__Link   level-2" href="event.removedReward.html">
                     <span class="clab-icon icon-file"></span>
                     removedReward
                   </a>
-                </li>
-              
+                </li>              
                 <li>
                   <a class="SidebarMenu__Link SidebarMenu__Link   level-2" href="event.removedWishlist.html">
                     <span class="clab-icon icon-file"></span>
@@ -458,20 +456,709 @@
       <!-- Content -->
       <section class="AppShell__Content hr-h4-margin-swap">
 
-<h1>Schemas</h1>
-
-<p>Here you can find a list and description of the data structures for Customers, Events and Contexts.</p>
-
-<h3>Customers</h3>
-The customer data structure includes a list of the fields related to customer properties, such as first name and last name, gender, date or birth or time zone.
-
-<h3>Events</h3>
-Each event has a different data structure, with its own fields.  For example, the “Completed order” event (a customer purchased goods in the ecommerce store) has fields such as: orderId, storeCode, paymentMethod, amount, and products. If an email campaign is sent to a customer, you will find in the “Campaign sent” event the campaignSubject, campaignId, campaignName and other relevant information.
-
-<h3>Contexts</h3>
-Each context has a different data structure, with its own fields.  For example, the “ECOMMERCE” context has properties such as the store info and the client info.
-	</section>
-
+<h2 id="consents">consents</h2>
+<h4 id="typeobject">Type: object</h4>
+<p><em>The customer's consents data structure included in Contacthub</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#disclaimer">disclaimer</a></td>
+<td><em>object, null</em></td>
+<td>The part for legal acceptances</td>
+<td><code>{...}</code></td>
+</tr>
+<tr>
+<td><a href="#marketing">marketing</a></td>
+<td><em>object, null</em></td>
+<td>The part of marketing's consents</td>
+<td><code>{...}</code></td>
+</tr>
+<tr>
+<td><a href="#profiling">profiling</a></td>
+<td><em>object, null</em></td>
+<td>The part of profiling's consents</td>
+<td><code>{...}</code></td>
+</tr>
+<tr>
+<td><a href="#softspam">softSpam</a></td>
+<td><em>object, null</em></td>
+<td>The part of softspam's consents</td>
+<td><code>{...}</code></td>
+</tr>
+<tr>
+<td><a href="#thirdpartytransfer">thirdPartyTransfer</a></td>
+<td><em>object, null</em></td>
+<td>The part of third party transfer's consents</td>
+<td><code>{...}</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="disclaimer">disclaimer</h2>
+<h4 id="typeobjectnull">Type: object,null</h4>
+<p><em>The part for legal acceptances</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>date</td>
+<td><em>string, null</em></td>
+<td>Version of disclaimer<br/><strong>format:</strong> <code>date-time</code></td>
+<td><code>"1970-01-01T12:00:00Z"</code></td>
+</tr>
+<tr>
+<td>version</td>
+<td><em>string, null</em></td>
+<td>The date of acceptance of the disclaimer</td>
+<td><code>"example"</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="marketing">marketing</h2>
+<h4 id="typeobjectnullobjectnull">Type: object,null</h4>
+<p><em>The part of marketing's consents</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#traditional">traditional</a></td>
+<td><em>object, null</em></td>
+<td>The part of traditional marketing's consents</td>
+<td><code>{...}</code></td>
+</tr>
+<tr>
+<td><a href="#automatic">automatic</a></td>
+<td><em>object, null</em></td>
+<td>The part of automatic marketing's consents</td>
+<td><code>{...}</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="traditional">traditional</h2>
+<h4 id="typeobjectnull-1">Type: object,null</h4>
+<p><em>The part of traditional marketing's consents</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#telephonic">telephonic</a></td>
+<td><em>object, null</em></td>
+<td>Consent for traditional marketing by a telephonic call</td>
+<td><code>{...}</code></td>
+</tr>
+<tr>
+<td><a href="#papery">papery</a></td>
+<td><em>object, null</em></td>
+<td>Consent for traditional marketing by a papery</td>
+<td><code>{...}</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="traditionaltelephonic">telephonic</h2>
+<h4 id="typeobjectnullobjectnull-1">Type: object,null</h4>
+<p><em>Consent for traditional marketing by a telephonic call</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>status</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>limitation</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent limitation</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>objection</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent objection</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="papery">papery</h2>
+<h4 id="typeobjectnullobjectnull-2">Type: object,null</h4>
+<p><em>Consent for traditional marketing by a papery</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>status</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>limitation</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent limitation</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>objection</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent objection</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="automatic">automatic</h2>
+<h4 id="typeobjectnull-2">Type: object,null</h4>
+<p><em>The part of automatic marketing's consents</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#sms">sms</a></td>
+<td><em>object, null</em></td>
+<td>Consent for marketing by an automatic sms</td>
+<td><code>{...}</code></td>
+</tr>
+<tr>
+<td><a href="#email">email</a></td>
+<td><em>object, null</em></td>
+<td>Consent for marketing by an automatic email</td>
+<td><code>{...}</code></td>
+</tr>
+<tr>
+<td><a href="#push">push</a></td>
+<td><em>object, null</em></td>
+<td>Consent for marketing by an automatic mobile push</td>
+<td><code>{...}</code></td>
+</tr>
+<tr>
+<td><a href="#im">im</a></td>
+<td><em>object, null</em></td>
+<td>Consent for marketing by an automatic instant message</td>
+<td><code>{...}</code></td>
+</tr>
+<tr>
+<td><a href="#automatictelephonic">telephonic</a></td>
+<td><em>object, null</em></td>
+<td>Consent for marketing by an automatic telephonic call</td>
+<td><code>{...}</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="automatictelephonic">telephonic</h2>
+<h4 id="typeobjectnullobjectnull-1">Type: object,null</h4>
+<p><em>Consent for marketing by an automatic telephonic call</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>status</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>limitation</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent limitation</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>objection</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent objection</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="sms">sms</h2>
+<h4 id="typeobjectnull-3">Type: object,null</h4>
+<p><em>Consent for marketing by an automatic sms</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>status</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>limitation</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent limitation</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>objection</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent objection</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="email">email</h2>
+<h4 id="typeobjectnullobjectnull-3">Type: object,null</h4>
+<p><em>Consent for marketing by an automatic email</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>status</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>limitation</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent limitation</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>objection</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent objection</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="push">push</h2>
+<h4 id="typeobjectnull-4">Type: object,null</h4>
+<p><em>Consent for marketing by an automatic mobile push</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>status</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>limitation</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent limitation</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>objection</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent objection</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="im">im</h2>
+<h4 id="typeobjectnull-5">Type: object,null</h4>
+<p><em>Consent for marketing by an automatic instant message</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>status</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>limitation</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent limitation</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>objection</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent objection</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="profiling">profiling</h2>
+<h4 id="typeobjectnullobjectnull-4">Type: object,null</h4>
+<p><em>The part of profiling's consents</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#classic">classic</a></td>
+<td><em>object, null</em></td>
+<td>Consent for classic profiling</td>
+<td><code>{...}</code></td>
+</tr>
+<tr>
+<td><a href="#online">online</a></td>
+<td><em>object, null</em></td>
+<td>Consent for online profiling</td>
+<td><code>{...}</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="classic">classic</h2>
+<h4 id="typeobjectnull-6">Type: object,null</h4>
+<p><em>Consent for classic profiling</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>status</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>limitation</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent limitation</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>objection</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent objection</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="online">online</h2>
+<h4 id="typeobjectnull-7">Type: object,null</h4>
+<p><em>Consent for online profiling</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>status</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>limitation</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent limitation</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>objection</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent objection</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="softspam">softSpam</h2>
+<h4 id="typeobjectnull-8">Type: object,null</h4>
+<p><em>The part of softspam's consents</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#softspamemail">email</a></td>
+<td><em>object, null</em></td>
+<td>Consent for e-mail softspam</td>
+<td><code>{...}</code></td>
+</tr>
+<tr>
+<td><a href="#softspampapery">papery</a></td>
+<td><em>object, null</em></td>
+<td>Consent for papery softspam</td>
+<td><code>{...}</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="softspamemail">email</h2>
+<h4 id="typeobjectnullobjectnull-3">Type: object,null</h4>
+<p><em>Consent for e-mail softspam</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>status</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>limitation</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent limitation</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>objection</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent objection</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="softspampapery">papery</h2>
+<h4 id="typeobjectnullobjectnull-2">Type: object,null</h4>
+<p><em>Consent for papery softspam</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>status</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>limitation</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent limitation</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>objection</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent objection</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="thirdpartytransfer">thirdPartyTransfer</h2>
+<h4 id="typeobjectnull-9">Type: object,null</h4>
+<p><em>The part of third party transfer's consents</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#thirdpartytransferprofiling">profiling</a></td>
+<td><em>object, null</em></td>
+<td>Consent transfer to third parties for profiling</td>
+<td><code>{...}</code></td>
+</tr>
+<tr>
+<td><a href="#thirdpartytransfermarketing">marketing</a></td>
+<td><em>object, null</em></td>
+<td>Consent transfer to third parties for marketing</td>
+<td><code>{...}</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="thirdpartytransfermarketing">marketing</h2>
+<h4 id="typeobjectnullobjectnull">Type: object,null</h4>
+<p><em>Consent transfer to third parties for marketing</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>status</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>limitation</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent limitation</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>objection</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent objection</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="thirdpartytransferprofiling">profiling</h2>
+<h4 id="typeobjectnullobjectnull-4">Type: object,null</h4>
+<p><em>Consent transfer to third parties for profiling</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>status</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>limitation</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent limitation</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>objection</td>
+<td><em>boolean, null</em></td>
+<td>Status of consent objection</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+</section>
 
     </div>
     </main>

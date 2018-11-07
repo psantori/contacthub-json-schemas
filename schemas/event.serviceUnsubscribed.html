@@ -422,7 +422,7 @@
                 </li>
               
                 <li>
-                  <a class="SidebarMenu__Link SidebarMenu__Link   level-2" href="event.serviceUnsubscribed.html">
+                  <a class="SidebarMenu__Link SidebarMenu__Link is-active  level-2" href="event.serviceUnsubscribed.html">
                     <span class="clab-icon icon-file"></span>
                     serviceUnsubscribed
                   </a>
@@ -458,19 +458,68 @@
       <!-- Content -->
       <section class="AppShell__Content hr-h4-margin-swap">
 
-<h1>Schemas</h1>
-
-<p>Here you can find a list and description of the data structures for Customers, Events and Contexts.</p>
-
-<h3>Customers</h3>
-The customer data structure includes a list of the fields related to customer properties, such as first name and last name, gender, date or birth or time zone.
-
-<h3>Events</h3>
-Each event has a different data structure, with its own fields.  For example, the “Completed order” event (a customer purchased goods in the ecommerce store) has fields such as: orderId, storeCode, paymentMethod, amount, and products. If an email campaign is sent to a customer, you will find in the “Campaign sent” event the campaignSubject, campaignId, campaignName and other relevant information.
-
-<h3>Contexts</h3>
-Each context has a different data structure, with its own fields.  For example, the “ECOMMERCE” context has properties such as the store info and the client info.
-	</section>
+<h2 id="serviceunsubscribed">serviceUnsubscribed</h2>
+<h4 id="typeobject">Type: object</h4>
+<p><em>Customer unsubscribed from a service subscription</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>subscriberId</td>
+<td><em>string</em></td>
+<td>An ID used to identify the subscriber</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>serviceId</td>
+<td><em>string</em></td>
+<td>The idenfier of service</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>serviceName</td>
+<td><em>string</em></td>
+<td>The name of service</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>serviceType</td>
+<td><em>string</em></td>
+<td>The type of service</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>startDate</td>
+<td><em>string</em></td>
+<td>Date time of the start of service subscription<br/><strong>format:</strong> <code>date-time</code></td>
+<td><code>"1970-01-01T12:00:00Z"</code></td>
+</tr>
+<tr>
+<td>endDate</td>
+<td><em>string</em></td>
+<td>Date time of the end of service subscription<br/><strong>format:</strong> <code>date-time</code></td>
+<td><code>"1970-01-01T12:00:00Z"</code></td>
+</tr>
+<tr>
+<td><a href="#extraproperties">extraProperties</a></td>
+<td><em>object</em></td>
+<td>Extra pieces of information you can tie to events you track</td>
+<td><code>{...}</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="extraproperties">extraProperties</h2>
+<h4 id="typeobject-1">Type: object</h4>
+<p><em>Extra pieces of information you can tie to events you track</em></p>
+<hr />	</section>
 
 
     </div>

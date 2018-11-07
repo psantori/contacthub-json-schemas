@@ -65,7 +65,7 @@
                 </li>
               
                 <li>
-                  <a class="SidebarMenu__Link SidebarMenu__Link   level-2" href="context.other.html">
+                  <a class="SidebarMenu__Link SidebarMenu__Link is-active  level-2" href="context.other.html">
                     <span class="clab-icon icon-file"></span>
                     other
                   </a>
@@ -458,19 +458,234 @@
       <!-- Content -->
       <section class="AppShell__Content hr-h4-margin-swap">
 
-<h1>Schemas</h1>
-
-<p>Here you can find a list and description of the data structures for Customers, Events and Contexts.</p>
-
-<h3>Customers</h3>
-The customer data structure includes a list of the fields related to customer properties, such as first name and last name, gender, date or birth or time zone.
-
-<h3>Events</h3>
-Each event has a different data structure, with its own fields.  For example, the “Completed order” event (a customer purchased goods in the ecommerce store) has fields such as: orderId, storeCode, paymentMethod, amount, and products. If an email campaign is sent to a customer, you will find in the “Campaign sent” event the campaignSubject, campaignId, campaignName and other relevant information.
-
-<h3>Contexts</h3>
-Each context has a different data structure, with its own fields.  For example, the “ECOMMERCE” context has properties such as the store info and the client info.
-	</section>
+<h2 id="other">other</h2>
+<h4 id="typeobject">Type: object</h4>
+<p><em>Events made in other context</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#client">client</a></td>
+<td><em>object</em></td>
+<td></td>
+<td><code>{...}</code></td>
+</tr>
+<tr>
+<td><a href="#user">user</a></td>
+<td><em>object</em></td>
+<td></td>
+<td><code>{...}</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="client">client</h2>
+<h4 id="typeobject-1">Type: object</h4>
+<p><em>&nbsp;</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userAgent</td>
+<td><em>string, null</em></td>
+<td></td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>ip</td>
+<td><em>string</em></td>
+<td><br/><strong>format:</strong> <code>ipv4</code></td>
+<td><code>"127.0.0.1"</code></td>
+</tr>
+<tr>
+<td><a href="#localization">localization</a></td>
+<td><em>object, null</em></td>
+<td></td>
+<td><code>{...}</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="localization">localization</h2>
+<h4 id="typeobjectnull">Type: object,null</h4>
+<p><em>&nbsp;</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>city</td>
+<td><em>string</em></td>
+<td></td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>country</td>
+<td><em>string</em></td>
+<td></td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>region</td>
+<td><em>string</em></td>
+<td></td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>province</td>
+<td><em>string</em></td>
+<td></td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>zip</td>
+<td><em>string</em></td>
+<td></td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td><a href="#geo">geo</a></td>
+<td><em>object</em></td>
+<td></td>
+<td><code>{...}</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="geo">geo</h2>
+<h4 id="typeobject-2">Type: object</h4>
+<p><em>&nbsp;</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lat</td>
+<td><em>number</em></td>
+<td>latitude</td>
+<td><code>42.0</code></td>
+</tr>
+<tr>
+<td>lon</td>
+<td><em>number</em></td>
+<td>longitude</td>
+<td><code>42.0</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="user">user</h2>
+<h4 id="typeobject-3">Type: object</h4>
+<p><em>&nbsp;</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td><em>string</em></td>
+<td><strong>Required.</strong> The identifier of the user</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>externalId</td>
+<td><em>string, null</em></td>
+<td>The external identifier of the user</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>username</td>
+<td><em>string, null</em></td>
+<td>The username of the user</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>firstName</td>
+<td><em>string, null</em></td>
+<td>The first name of the user</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>lastName</td>
+<td><em>string, null</em></td>
+<td>The last name of the user</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td><a href="#contacts">contacts</a></td>
+<td><em>object, null</em></td>
+<td>The contact information for the user</td>
+<td><code>{...}</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="contacts">contacts</h2>
+<h4 id="typeobjectnull-1">Type: object,null</h4>
+<p><em>The contact information for the user</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>email</td>
+<td><em>string, null</em></td>
+<td>The email address of the user<br/><strong>format:</strong> <code>email</code></td>
+<td><code>"firstname.lastname@example.com"</code></td>
+</tr>
+<tr>
+<td>mobilePhone</td>
+<td><em>string, null</em></td>
+<td>The mobile phone number of the user</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>phone</td>
+<td><em>string, null</em></td>
+<td>The phone number of the user</td>
+<td><code>"example"</code></td>
+</tr>
+</tbody>
+</table>
+<hr />	</section>
 
 
     </div>

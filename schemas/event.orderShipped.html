@@ -359,7 +359,7 @@
                 </li>
               
                 <li>
-                  <a class="SidebarMenu__Link SidebarMenu__Link   level-2" href="event.orderShipped.html">
+                  <a class="SidebarMenu__Link SidebarMenu__Link is-active  level-2" href="event.orderShipped.html">
                     <span class="clab-icon icon-file"></span>
                     orderShipped
                   </a>
@@ -458,19 +458,64 @@
       <!-- Content -->
       <section class="AppShell__Content hr-h4-margin-swap">
 
-<h1>Schemas</h1>
-
-<p>Here you can find a list and description of the data structures for Customers, Events and Contexts.</p>
-
-<h3>Customers</h3>
-The customer data structure includes a list of the fields related to customer properties, such as first name and last name, gender, date or birth or time zone.
-
-<h3>Events</h3>
-Each event has a different data structure, with its own fields.  For example, the “Completed order” event (a customer purchased goods in the ecommerce store) has fields such as: orderId, storeCode, paymentMethod, amount, and products. If an email campaign is sent to a customer, you will find in the “Campaign sent” event the campaignSubject, campaignId, campaignName and other relevant information.
-
-<h3>Contexts</h3>
-Each context has a different data structure, with its own fields.  For example, the “ECOMMERCE” context has properties such as the store info and the client info.
-	</section>
+<h2 id="ordershipped">orderShipped</h2>
+<h4 id="typeobject">Type: object</h4>
+<p><em>The company shipped the products present in the order</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>orderId</td>
+<td><em>string</em></td>
+<td>Order/Transaction ID</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>type</td>
+<td><em>string</em></td>
+<td>The type of shipment</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>carrier</td>
+<td><em>string</em></td>
+<td>The name of the shipping service</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>trackingCode</td>
+<td><em>string</em></td>
+<td>The tracking code/number of shipment</td>
+<td><code>"example"</code></td>
+</tr>
+<tr>
+<td>trackingUrl</td>
+<td><em>string</em></td>
+<td>The url for track the of shipment<br/><strong>format:</strong> <code>uri</code></td>
+<td><code>"http://www.example.com/example"</code></td>
+</tr>
+<tr>
+<td>weight</td>
+<td><em>number</em></td>
+<td>The weight of packages</td>
+<td><code>42.0</code></td>
+</tr>
+<tr>
+<td>packages</td>
+<td><em>integer</em></td>
+<td>The number of packages</td>
+<td><code>42</code></td>
+</tr>
+</tbody>
+</table>
+<hr />	</section>
 
 
     </div>
