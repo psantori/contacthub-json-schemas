@@ -739,7 +739,7 @@ code {
 }
 
 .AppShell__Content {
-	min-height: 50vh
+	min-height: 100vh
 }
 
 .AppShell__Sidebar {
