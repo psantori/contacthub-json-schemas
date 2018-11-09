@@ -687,8 +687,8 @@ code {
 }
 
 .AppShell {
-	padding: 0 20px;
-	position: relative
+	/*padding: 0 20px;
+	position: relative*/
 }
 
 .AppShell--Display {
@@ -696,10 +696,10 @@ code {
 }
 
 .AppShell-Wrapper {
-	max-width: 1100px;
+	/*max-width: 1100px;
 	position: relative;
 	margin: 0 auto 40px;
-	padding-top: 0;
+	padding-top: 0;*/
 }
 
 @media (min-width: 60em) {
